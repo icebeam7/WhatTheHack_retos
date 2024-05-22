@@ -1,38 +1,38 @@
-# Challenge 00 - Prerequisites - Ready, Set, GO!
+# Reto 00: Prerrequisitos - En sus marcas, listos… ¡fuera!
 
-**[Home](../README.md)** - [Next Challenge >](./Challenge-01.md)
+**[Home](../README.md)** - [Siguiente reto >](./Challenge-01.md)
 
-## Introduction
+## Introducción
 
-Thank you for participating in the Modern Development and DevOps with GitHub What The Hack. Over the next series of challenges you'll create a new repository for the source code, configure some common DevOps processes, and write some code. But before we get started, let's make sure we've got everything setup.
+Gracias por participar en What The Hack en el reto Modern development con DevOps y GitHub. En este desafio crearás un nuevo repositorio para el código, configurarás algunos procesos comunes de DevOps y escribirás algo de código. Pero antes de comenzar, asegurémonos de tener todo listo.
 
-## Prerequisites
+## Prerrequisitos
 
-During this hack, you will be using features which will allow you to code and contribute to the project without having to install tools locally. As a result, you'll only need to ensure you have the following:
+Durante este desafio, utilizarás características que te permitirán programar y contribuir al proyecto sin necesidad de instalar herramientas localmente. Como resultado, solo necesitarás asegurarte de tener lo siguiente:
 
-<!-- If you are editing this template manually, be aware that these links are only designed to work if this Markdown file is in the /xxx-HackName/Student/ folder of your hack. -->
+- [Cuenta de GitHub](https://github.com) para desarrollar y gestionar el proyecto.
+- Cuenta de Azure, la cual te proporcionaremos al inicio del reto. 
 
-- [GitHub Account](https://github.com) for developing on and managing the project.
-- [Azure Subscription](../../000-HowToHack/WTH-Common-Prerequisites.md#azure-subscription) for deploying the application.
+<!-- Nota si agregamos que lo puedan hacer local editar este [Azure Subscription](../../000-HowToHack/WTH-Common-Prerequisites.md#azure-subscription) for deploying the application. -->
 
-## Description
+## Descripción
 
-The shelter has an application already created by a vendor they wish to use as the foundation for their website. The project currently resides on GitHub as a template. The first step is for you to obtain the source code and create a repository on GitHub to maintain a separate copy. The changes you make will **not** be merged back to the original application.
+El refugio ya cuenta con una aplicación creada por un proveedor que desean utilizar como base para su sitio web. El proyecto actualmente lo puedes encontrar en [GitHub como una plantilla](https://github.com/github/pets-workshop). El primer paso es obtener el código fuente y crear un repositorio en GitHub para mantener una copia separada. Los cambios que realices no se mezclaran con el repositorio original.
 
-The project is a [Next.js](https://nextjs.org/)/[React](https://reactjs.org/) project using [MongoDB](https://www.mongodb.com/). It is based on the [Next.js MongoDB example](https://github.com/vercel/next.js/tree/canary/examples/with-mongodb).
+<!-- https://github.com/github/pets-workshop recuerda crear el porpio en espaniol para -->
 
-> **IMPORTANT**: This hackathon does **not** require experience with JavaScript, React or Next.js.
+El proyecto es un proyecto de Next.js/React que utiliza MongoDB.
 
-## Success Criteria
+> **IMPORTANTE**:  Este desafio no requiere experiencia con JavaScript, React o Next.js. 
 
-- You have a copy of the existing application in a repository in your account/organization
-- You have **not** created a fork of the existing repository
+## Criterios de Éxito
 
-## Learning Resources
+- Tienes una copia de la aplicación existente en un repositorio en tu cuenta.
+- No has creado un fork del repositorio existente.
 
-- [Creating a template repository](https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-template-repository)
-- [Creating a repository from a template](https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
-- [What is DevOps?](https://docs.microsoft.com/azure/devops/learn/what-is-devops)
-- [What is GitHub?](https://guides.github.com/activities/hello-world/)
-- [Azure DevOps vs. GitHub](https://acloudguru.com/blog/engineering/azure-devops-vs-github-comparing-microsofts-devops-twins)
-- [GitHub Learning Lab](https://lab.github.com/)
+## Recursos de Aprendizaje
+
+- [Crear un repositorio desde una plantilla](https://docs.github.com/es/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+- [¿Qué es DevOps?](https://learn.microsoft.com/es-es/devops/what-is-devops)
+- [¿Qué es GitHub?](https://docs.github.com/es/get-started/start-your-journey/hello-world)
+- [Azure DevOps vs. GitHub - English](https://acloudguru.com/blog/engineering/azure-devops-vs-github-comparing-microsofts-devops-twins)
