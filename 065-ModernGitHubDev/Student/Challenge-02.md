@@ -1,41 +1,41 @@
-# Challenge 02 - Add A Feature To The Existing Application
+# Reto 02 - Añadir una Funcionalidad a la Aplicación Existente
 
-[< Previous Challenge](./Challenge-01.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-03.md)
+[<  Reto Anterior](./Challenge-01.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-03.md)
 
-## Introduction
+## Introducción
 
-The shelter's board knows there's a lot of work to be done on the application. Because they're trying to get things moving in the right direction, they want to make one quick change to ensure their DevOps processes work correctly. To do this, the board would like to display the hours the shelter is open for the current day. The shelter is open from 10am to 4pm Monday-Friday, and 9am to 8pm Saturday and Sunday. They'd like to have this as a new React component in the project so it can be used in different places in the application.
+El refugio sabe que hay mucho trabajo por hacer en la aplicación. Debido a que están intentando mover las cosas en la dirección correcta, quieren hacer un cambio rápido para asegurarse de que sus procesos de DevOps funcionen correctamente. Para lograrlo, el refugio desea mostrar las horas en las que el refugio está abierto durante el día actual. El refugio abre de 10 a.m. a 4 p.m. de lunes a viernes, y de 9 a.m. a 8 p.m. los sábados y domingos. Les gustaría tener esto como un nuevo componente de React en el proyecto para que pueda ser utilizado en diferentes lugares de la aplicación.
 
-## Description
+## Descripción
 
-With the development environment created and configured, it's time for some development. While the project uses [Next.js](https://nextjs.org)/[React](https://reactjs.org), not everyone is an expert in those frameworks. Even experts can struggle at times to remember syntax. And no developer enjoys the tedious tasks which often arise when writing code. [GitHub Copilot](https://github.com/features/copilot) is an AI pair programmer trained on billions of lines of publicly available code and text, designed to offer code suggestions to enhance and streamline your development process.
+Con el entorno de desarrollo creado y configurado, es hora de programar. Aunque el proyecto utiliza [Next.js](https://nextjs.org)/[React](https://reactjs.org), no todos somos expertos en esos frameworks. Incluso los expertos pueden tener dificultades a veces para recordar la sintaxis. Y ningún desarrollador disfruta de las tareas tediosas que a menudo surgen al escribir código. GitHub Copilot es un programador auxiliar de IA entrenado con miles de millones de líneas de código y texto públicamente disponibles, diseñado para ofrecer sugerencias de código que mejoren y agilicen tu proceso de desarrollo.
 
-> **IMPORTANT:** As highlighted earlier, coding experience is **not** required for this hack. A solution can be provided to you by your coach.
+> **IMPORTANTE:** Como se destacó anteriormente, no se requiere experiencia en programación para este reto. Si necesitas la solución, pide ayuda y te proporcionaremos el código.
 
-For this challenge, you will create a new React component named **Hours.js** in the **components** folder. You will add the code necessary to display the hours for the current day of the week. After creating the component, you will update **index.js** in the **pages** folder to import the newly created component and display it on the page.
+Para este desafío, crearás un nuevo componente React llamado  **Hours.js** en la carpeta **components**. Añadirás el código necesario para mostrar las horas del día actual de la semana. Después de crear el componente, actualizarás **index.js** en la carpeta **pages** para importar el componente recién creado y mostrarlo en la página.
 
-> **IMPORTANT:** Do **not** commit the files to the `main` branch. In an upcoming challenge you will create a pull request.
+> **IMPORTANTE: NO**  hagas commit de los archivos en la rama main. En un desafío próximo crearás un pull request.
 
-- Create the `Hours` component by adding a file named **Hours.js** to the **components** folder.
-    - Your coach can provide a completed **Hours.js** file to use.
-- The syntax to import the `Hours` component in **index.js** is `import Hours from '../components/Hours';`, and can be placed below the line which reads `// TODO: Import Hours component`.
+-Crea el componente Hours añadiendo un archivo llamado **Hours.js** a la carpeta components.
+    - Recuerda que te podemos proveer el archivo ya listo si tienesn dudas.
+- La sintaxis para importar el componente Hours en **index.js** es `import Hours from '../components/Hours';`, y se puede colocar debajo de la línea que dice `// TODO: Import Hours component`
 - The syntax to display the `Hours` component in **index.js** is `<Hours />`, and can be added immediately below the line which reads `{/* TODO: Display Hours component */}`.
-- For purposes of this challenge, you can read the current day from the browser without regard for the user's timezone.
+- La sintaxis para mostrar el componente `Hours` en **index.js** es `<Hours />`, y se puede añadir inmediatamente debajo de la línea que dice `{/* TODO: Display Hours component */}`}.
+- Para los propósitos de este desafío, puedes leer el día actual desde el navegador sin tener en cuenta la zona horaria del usuario.
 
-## Success Criteria
+## Criterios de Éxito
 
-- You have created a new component named `Hours` which displays the hours for the current day.
-- The `Hours` component is called in **index.js**.
-- The hours are successfully displayed on the site.
+- Has creado un nuevo componente llamado Hours que muestra las horas del día actual.
+- El componente `Hours` es llamada en **index.js**.
+- Las horas se muestran correctamente en el sitio.
 
-## Learning Resources
+## Recursos de Aprendizaje
 
-- [Getting started with React](https://reactjs.org/docs/hello-world.html)
-- [Getting started with GitHub Copilot in Visual Studio Code (Codespaces)](https://docs.github.com/copilot/getting-started-with-github-copilot/getting-started-with-github-copilot-in-visual-studio-code)
-- [Getting your first suggestion with GitHub Copilot](https://docs.github.com/copilot/quickstart#getting-your-first-suggestion) 
+- [Comenzando con React](https://es.react.dev/learn)
+- [Introducción a GitHub Copilot](https://docs.github.com/es/copilot/using-github-copilot/getting-started-with-github-copilot)
 
 ## Tips
 
-- All React components need to `import React from 'react';` at the top of the file.
-- GitHub Copilot offers suggestions based on both code and comments. You can describe in natural language the task you are trying to accomplish and Copilot will offer suggestions.
-- Rewording comments can help Copilot offer different suggestions closer to what you are looking for.
+- Todos los componentes de React necesitan `import React from 'react'; en la parte superior del archivo.
+- GitHub Copilot ofrece sugerencias basadas tanto en código como en comentarios. Puedes describir en lenguaje natural la tarea que estás intentando realizar y Copilot ofrecerá sugerencias.
+- Reescribir comentarios puede ayudar a que Copilot ofrezca diferentes sugerencias más cercanas a lo que estás buscando.
