@@ -1,6 +1,6 @@
 # Reto 01: Configurar tu entorno de desarrollo
 
-[< Reto Anterior](./Challenge-00.md) - **[Home](../README.md)** - [Siguiente Anterior >](./Challenge-02.md)
+[< Reto Anterior](./Challenge-00.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-02.md)
 
 ## Introducción
 
