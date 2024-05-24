@@ -1,49 +1,48 @@
-# Challenge 01 - Configure Your Development Environment
+# Reto 01: Configurar tu entorno de desarrollo
 
-[< Previous Challenge](./Challenge-00.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-02.md)
+[< Reto Anterior](./Challenge-00.md) - **[Home](../README.md)** - [Siguiente Anterior >](./Challenge-02.md)
 
-## Introduction
+## Introducción
 
-With a copy of the project obtained, it's time to turn your attention to setting up your development environment. The shelter's board is keen on ensuring developers are able to contribute to the project as seamlessly as possible, avoiding tedious setup. To meet this requirement, setting up the project on a developer's box isn't the best option. You will want to find a cloud based solution which allows for a centrally configured development environment.
+Con la copia del proyecto obtenida, es momento de centrar tu atención en configurar tu entorno de desarrollo. El refugio está interesado en asegurar que los desarrolladores puedan contribuir al proyecto de la manera más fluida posible, evitando configuraciones tediosas. Para cumplir con este requisito, configurar el proyecto de manera local no es la mejor opción. Deberás buscar una solución basada en la nube que permita un entorno de desarrollo configurado de manera centralizada 😉.
 
-## Description
+## Descripción
 
-You will create a development environment which meets the needs listed above. You want to be able to begin writing code without having to install any resources locally on your machine.
+Crearás un entorno de desarrollo que cumpla con las necesidades mencionadas anteriormente. Quieres poder comenzar a escribir código sin necesidad de instalar recursos localmente en tu máquina.
 
-During the development process, you will be creating various Azure resources and configuring your GitHub repository. As a result, you'll need to have access to the [Azure CLI](https://learn.microsoft.com/cli/azure/) and [GitHub CLI](https://learn.microsoft.com/cli/azure/).
+Durante el desarrollo, crearás recursos en Azure y configurarás tu repositorio en GitHub utilizando las CLIs de Azure y GitHub. Al inicio del taller, recibirás los detalles necesarios para acceder a todos los recursos de Azure y configurar adecuadamente tu entorno de desarrollo en la nube.
 
-The application uses an environment variable named `MONBODB_URI` to connect to the MongoDB database. When creating the cloud-based development environment, you will need to add this as an encrypted secret with the value **mongodb://localhost**.
+La aplicación utiliza una variable de entorno llamada **MONBODB_URI** para conectarse a la base de datos MongoDB. Al crear tu entorno de desarrollo en la nube, necesitarás agregar esto como un secreto encriptado con el valor **mongodb://localhost**.
 
-Once the development environment is created, you will need to test the application by running the following commands:
+Una vez creado el entorno de desarrollo, necesitarás probar la aplicación ejecutando el siguiente comando:
 
 ```bash
-npm install
 npm run dev
 ```
 
-## Success Criteria
+## Criterios de Éxito
 
-- You have created and configured a cloud-based development environment with the following resources installed:
+- Has creado y configurado un entorno de desarrollo en la nube con los siguientes recursos instalados:
   - GitHub CLI
   - Azure CLI
   - MongoDB
-- You have created an encrypted secret for `MONGODB_URI`
-- You are able to launch and view the application in the cloud-based development environment
+- Has creado un secreto encriptado para MONGODB_URI
+- Eres capaz de inciar y ver la aplicación en el entorno de desarrollo basado en la nube
 - All changes are merged into `main`
-- **No** resources were installed on your machine
+- **No** se instalaron recursos en tu máquina
 
 ## Learning Resources
 
-- [GitHub Codespaces](https://docs.github.com/codespaces/overview)
-- [Introduction to dev containers](https://docs.github.com/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
-- [Setting up a Node.js project](https://docs.github.com/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-nodejs-project-for-codespaces)
-- [Adding features to a devcontainer.json file](https://docs.github.com/codespaces/setting-up-your-project-for-codespaces/configuring-dev-containers/adding-features-to-a-devcontainer-file)
-- [Forwarding ports in your codespace](https://docs.github.com/codespaces/developing-in-codespaces/forwarding-ports-in-your-codespace)
-- [Managing encrypted secrets for your codespaces](https://docs.github.com/codespaces/managing-your-codespaces/managing-encrypted-secrets-for-your-codespaces)
-- [Developing in a codespace](https://docs.github.com/codespaces/developing-in-codespaces/developing-in-a-codespace)
-- [Prebuilding your codespaces](https://docs.github.com/codespaces/prebuilding-your-codespaces)
+- [GitHub Codespaces](https://docs.github.com/es/codespaces/overview)
+- [Introducción a los contenedores dev](https://docs.github.com/es/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
+- [Configuración de un proyecto de Node.js para GitHub Codespaces](https://docs.github.com/es/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-nodejs-project-for-codespaces)
+- [Adición de características a un archivo devcontainer.json](https://docs.github.com/es/codespaces/setting-up-your-project-for-codespaces/configuring-dev-containers/adding-features-to-a-devcontainer-file)
+- [Reenviar puertos en tu codespace](https://docs.github.com/es/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace)
+- [Administración de secretos específicos de la cuenta para GitHub Codespaces](https://docs.github.com/es/codespaces/managing-your-codespaces/managing-your-account-specific-secrets-for-github-codespaces)
+- [Desarrollar en un codespace](https://docs.github.com/es/codespaces/developing-in-a-codespace/developing-in-a-codespace)
+- [Precompilación de los codespaces](https://docs.github.com/es/codespaces/prebuilding-your-codespaces)
 
 ## Tips
 
-- **Ctl-\`** will display the terminal window in Codespaces
-- **Cmd-Shift-P** (Mac) or **Ctl-Shift-P** (PC) will open the command palette
+- **Ctl-\`** mostrará la ventana de la terminal en Codespaces.
+- **Cmd-Shift-P** (Mac) or **Ctl-Shift-P** (PC) abrirá la paleta de comandos
