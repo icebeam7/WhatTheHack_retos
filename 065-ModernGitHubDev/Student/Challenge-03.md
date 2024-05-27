@@ -1,33 +1,33 @@
-# Challenge 03 - Continuous Integration And Security
+# Challenge 03 - Integración continua y seguridad
 
-[< Previous Challenge](./Challenge-02.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-04.md)
+[< Reto Anterior](./Challenge-02.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-04.md)
 
-## Introduction
+## Introducción
 
-The board of the shelter has seen many troubling news stories of breeches into various applications, including those run by non-profits. In fact, organizations which traditionally may not have invested in infrastructure can be popular targets for attackers. The board wants to ensure their application doesn't contain any vulnerabilities which can be exploited.
+El refugio ha visto muchas noticias preocupantes sobre brechas de seguridad en diversas aplicaciones, incluidas las gestionadas por organizaciones sin fines de lucro. De hecho, las organizaciones que tradicionalmente pueden no haber invertido en infraestructura pueden ser objetivos populares para los atacantes. El refugio quiere asegurarse de que su aplicación no contenga vulnerabilidades que puedan ser explotadas.
 
-## Description
+## Descripción
 
-For this challenge you will configure scanning for the entire [software supply chain](https://github.blog/2020-09-02-secure-your-software-supply-chain-and-protect-against-supply-chain-threats-github-blog/) for the application. Specifically, you want to scan your code for potential issues when a [pull request (PR)](https://docs.github.com/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) is made to the `main` branch. You also want to confirm the packages the project uses are free from known vulnerabilities. Finally, once you have configured security, you will create a pull request with the code updates you made in the previous challenge.
+Para este desafío, deberas configurar el escaneo para toda la [cadena de suministro de software](https://github.blog/2020-09-02-secure-your-software-supply-chain-and-protect-against-supply-chain-threats-github-blog/) de la aplicación. Específicamente, deseas escanear tu código en busca de problemas potenciales cuando se realiza un [pull request](https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) a la rama `main`. También quieres confirmar que los paquetes que utiliza el proyecto estén libres de vulnerabilidades conocidas. Finalmente, una vez que hayas configurado la seguridad, crearás un pull request con las actualizaciones de código que realizaste en el reto anterior.
 
-Scanning for vulnerabilities, running tests, and ensuring code compiles is typically automated as part of a process called **continuous integration** (CI). CI allows teams to quickly validate new code doesn't introduce any issues to the existing code base, improving your ability to respond to customer requests and reduce development overhead. For this hack, you will enable [GitHub Advanced Security](https://docs.github.com/get-started/learning-about-github/about-github-advanced-security), which is a common part of a complete CI process.
+El escaneo de vulnerabilidades, la ejecución de pruebas y la verificación de que el código compila típicamente se automatizan como parte de un proceso llamado integración continua (CI). La CI permite a los equipos validar rápidamente que el nuevo código no introduzca problemas en la base de código existente, mejorando tu capacidad para responder a las solicitudes de los clientes y reducir la sobrecarga de desarrollo. Para este hack, habilitarás [GitHub Advanced Security](https://docs.github.com/es/get-started/learning-about-github/about-github-advanced-security), que es una parte común de un proceso completo de CI.
 
-## Success Criteria
+## Criterios de Éxito
 
-- Demonstrate that [Code scanning](https://docs.github.com/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning) is set to run on all pull requests made to `main`
-- Demonstrate that [Dependency review](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review) is enabled for the repository
-- Verify the `main` branch is configured to require pull requests, and both code scanning and dependency review must succeed for a merge to be completed
-- Demonstrate that a pull request has been made to main and all checks pass
+- Demostrar que el [escaneo de código](https://docs.github.com/es/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning) está configurado para ejecutarse en todas los pull requests solicitudes de extracción realizadas a `main`.
+- Demostrar que la [revisión de dependencias](https://docs.github.com/es/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review) está habilitada para el repositorio.
+- Verificar que la rama `main` esté configurada para requerir pull requests, y que tanto el escaneo de código como la revisión de dependencias deben aprobarse para que se complete un merge.
+- Demostrar que se ha realizado un pull request solicitud a main y que todas las verificaciones han pasado.
 
-> **IMPORTANT:** You will merge the PR into `main` in a later challenge
+> **IMPORTANTE:**  Fusionarás el PR en `main` en un desafío posterior. 
 
-## Learning Resources
+## Recursos de Aprendizaje
 
-- [Introduction to GitHub Actions](https://docs.github.com/actions/learn-github-actions/understanding-github-actions)
+- [Entender las GitHub Actions](https://docs.github.com/es/actions/learn-github-actions/understanding-github-actions)
 - [About code scanning](https://docs.github.com/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/about-code-scanning)
 - [Configuring code scanning for a repository](https://docs.github.com/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning-for-a-repository)
 - [About dependency review](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review)
-- [Configure dependency review](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/configuring-dependency-review)
-- [About protected branches](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/about-protected-branches)
-- [About branch protection rules](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)
-- [Using source control in your codespace](https://docs.github.com/codespaces/developing-in-codespaces/using-source-control-in-your-codespace)
+- [Configuración de la revisión de dependencias](https://docs.github.com/code-security/supply-chain-security/understanding-your-software-supply-chain/configuring-dependency-review)  
+- [Acerca de las ramas protegidas](https://docs.github.com/es/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
+- [Administrar una regla de protección de rama](https://docs.github.com/es/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
+- [Utilizar el control de código fuente en tu codespace](https://docs.github.com/es/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace)
