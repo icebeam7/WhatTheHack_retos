@@ -1,37 +1,38 @@
-# Challenge 05 - Deploying the project
+# Reto 05 - Despliegue del proyecto
 
-[< Previous Challenge](./Challenge-04.md) - **[Home](../README.md)**
+[< Reto Anterior ](./Challenge-04.md) - **[Home](../README.md)**
 
-## Introduction
+## Introducción
 
-The board of the shelter is rather pleased. You've updated the application with a new feature, configured security checks, and created an environment in Azure to host the project. The time has come to deploy the project!
+El refugio está bastante satisfecho. Has actualizado la aplicación con una nueva característica, configurado controles de seguridad y creado un entorno en Azure para alojar el proyecto. ¡Ha llegado el momento de desplegar el proyecto!
 
-Because the application will continue to grow with new features in the near future, the board wants to ensure the deployment process is streamlined. Whenever new code is pushed to `main` it should be deployed to production.
+Dado que la aplicación continuará creciendo con nuevas características en un futuro cercano, el refugio desea asegurar que el proceso de despliegue sea eficiente. Siempre que se envíe nuevo código a `main`, este debería ser desplegado en producción.
 
-## Description
+## Descripción
 
-You will complete this hack by creating one last [GitHub Action](https://docs.github.com/actions/learn-github-actions/understanding-github-actions) to deploy the project to Azure. Deploying a project can be rather complex depending on the services being used and [service level agreement (SLA)](https://en.wikipedia.org/wiki/Service-level_agreement) which needs to be met. For example, you may need to configure [blue/green deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html) to ensure no downtime when new features are published. You can talk about different scenarios with your coach.
+Completarás este hack creando una última [GitHub Action](https://docs.github.com/es/actions/learn-github-actions/understanding-github-actions) para desplegar el proyecto en Azure. Desplegar un proyecto puede ser bastante complejo dependiendo de los servicios utilizados y del [acuerdo de nivel de servicio (SLA)](https://es.wikipedia.org/wiki/Acuerdo_de_nivel_de_servicio) que se necesita cumplir. Por ejemplo, es posible que necesites configurar un [despliegue azul/verde](https://martinfowler.com/bliki/BlueGreenDeployment.html) para asegurar que no haya tiempo de inactividad cuando se publiquen nuevas características. Puedes hablar sobre diferentes escenarios con los mentores coach.
 
-For purposes of this hack, you will deploy to the [environment you created earlier](./challenge04.md) when code is pushed into `main`.
+Para los propósitos de este hack, desplegarás en el [entorno que creaste anteriormente](./Challenge-04.md) cuando el código se envíe a `main`.
 
-## Success Criteria
+## Criterios de Éxito
 
-- Demonstrate a GitHub Action is created which deploys the website to [Azure Container Apps](https://learn.microsoft.com/azure/container-apps/overview) when code is pushed into `main`
-- Verify the PR you created earlier is pushed to `main`
-- Demonstrate that the public site displays the shelter's application, including the hours information from the [component you created earlier](./challenge01.md)
+- Demuestra que se ha creado un GitHub Action que despliega el sitio web en [Azure Container Apps](https://learn.microsoft.com/es-es/azure/container-apps/overview) cuando el código se envía a `main`.
+- Verifica que la PR que creaste anteriormente se haya enviado a `main`.
+- Demuestra que el sitio público muestra la aplicación del refugio, incluyendo la información de horarios del [componente que creaste anteriormente](./Challenge-01.md).
+
 
 ## Learning Resources
 
-- [Understanding GitHub Actions](https://docs.github.com/actions/learn-github-actions/understanding-github-actions)
-- [Triggering a workflow](https://docs.github.com/actions/using-workflows/triggering-a-workflow)
-- [Publish revisions with GitHub Actions in Azure Container Apps](https://learn.microsoft.com/azure/container-apps/github-actions)
+- [Entender las GitHub Actions](https://docs.github.com/es/actions/learn-github-actions/understanding-github-actions)
+- [Activar un flujo de trabajo](https://docs.github.com/es/actions/using-workflows/triggering-a-workflow)
+- [Implementación en Azure Container Apps con Acciones de GitHub](https://learn.microsoft.com/es-es/azure/container-apps/github-actions)
 - [Azure Container Apps Build and Deploy - GitHub Actions](https://github.com/marketplace/actions/azure-container-apps-build-and-deploy)
-- [GitHub Actions contexts](https://docs.github.com/en/actions/learn-github-actions/contexts)
-- [GitHub Actions encrypted secrets](https://docs.github.com/actions/security-guides/encrypted-secrets)
+- [GitHub Actions contexts](https://docs.github.com/es/actions/learn-github-actions/contexts)
+- [Uso de secretos en GitHub actions](https://docs.github.com/es/actions/security-guides/using-secrets-in-github-actions)
 
 ## Tips
 
-- You can concatenate strings when defining a workflow using secrets or variables and string literals
-- The name of the Azure Container Registry will be **`<your_prefix>`acr**
-- The name of the Azure Container App will be **`<your_prefix>`containerapp**
-- The name of the Azure Container App Environment will be **`<your_prefix>`containerappenvironment**
+- Puedes concatenar cadenas al definir un workflow usando secretos o variables y literales de cadena.
+- El nombre del 'Azure Container Registry' será **`<your_prefix>`acr**
+- El nombre de la 'Azure Container App' será **`<your_prefix>`containerapp**
+- El nombre de la ' Azure Container App' será **`<your_prefix>`containerappenvironment**
