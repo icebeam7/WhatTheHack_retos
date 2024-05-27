@@ -1,55 +1,60 @@
-# Challenge 04 - Creating A Deployment Environment
+# Reto 04 - Crear un Entorno de Despliegue
 
-[< Previous Challenge](./Challenge-03.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-05.md)
+[< Reto Anterior](./Challenge-03.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-05.md)
 
-## Introduction
+## Introducción
 
-With the application updated, the shelter is ready to begin configuring deployment! They have elected to use Azure to host the application. The website will be hosted on [Azure Container Apps](https://learn.microsoft.com/azure/container-apps/overview), and the database on [Azure Cosmos DB for MongoDB](https://learn.microsoft.com/azure/cosmos-db/mongodb/introduction). The first step of the process will be creating and configuring the environment on Azure. In a later challenge you'll configure continuous deployment for the project.
+Con la aplicación actualizada, ¡el refugio está listo para comenzar a configurar el despliegue! Han elegido usar Azure para alojar la aplicación. El sitio web se alojará en [Azure Container Apps](https://learn.microsoft.com/es-es/azure/container-apps/overview) y la base de datos en [Azure Cosmos DB para MongoDB](https://learn.microsoft.com/es-es/azure/cosmos-db/mongodb/introduction). 
 
-## Description
+El primer paso será asegurarte de que tienes acceso al repositorio de GitHub asignado. Este repositorio contiene toda la información necesaria para configurar y desplegar la aplicación en Azure. No necesitarás crear ni configurar el entorno por tu cuenta; simplemente tendrás permisos de lectura para acceder a la información relevante. Durante la introducción del reto, te proporcionaremos detalles sobre cómo acceder y utilizar este repositorio con la información de la cuenta de Azure que usarás. En un reto posterior, configurarás el despliegue continuo para el proyecto.
 
-For this challenge, you will create a [GitHub workflow](https://docs.github.com/actions/learn-github-actions/understanding-github-actions) which uses an [Azure Bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep) file to configure the necessary resources on Azure. You will create a resource group to house the Azure resources, configure a service identity to grant permissions to the Action, and run the Action to create the resources.
+## Descripción
 
-Configuration as Code (CaC), or config as code, is an approach to managing system configuration which involves defining configuration settings in machine-readable files or scripts. This allows for more efficient, automated, and consistent management of system configuration, as changes can be made and deployed more easily and with greater control. With config as code, configuration settings are stored in version-controlled files, often using a declarative syntax such as YAML, JSON, or HCL. These files can be stored alongside application code, making it easier to manage the entire software development life cycle.
+Para este reto, crearás un [GitHub workflow](https://docs.github.com/es/actions/learn-github-actions/understanding-github-actions) que utiliza un archivo [Azure Bicep](https://learn.microsoft.com/es-es/azure/azure-resource-manager/bicep/overview?tabs=bicep) para configurar los recursos necesarios en Azure. Para este reto, el grupo de recursos necesario ya está establecido y puedes encontrar toda la información relevante en el repositorio de GitHub asignado. Solo necesitarás configurar una identidad de servicio para otorgar los permisos necesarios a la acción y ejecutar la acción para crear los recursos adicionales.
+
+La Configuración como Código (CaC), o configuración como código, es un enfoque para gestionar la configuración del sistema que implica definir los ajustes de configuración en archivos o scripts legibles por máquinas. Esto permite una gestión más eficiente, automatizada y consistente de la configuración del sistema, ya que los cambios pueden realizarse y desplegarse más fácilmente y con mayor control. Con la configuración como código, los ajustes de configuración se almacenan en archivos controlados por versiones, utilizando a menudo una sintaxis declarativa como YAML, JSON o HCL. Estos archivos pueden almacenarse junto con el código de la aplicación, facilitando la gestión de todo el ciclo de vida del desarrollo del software.
 
 This challenge uses [Azure Bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep), which is a domain specific language for defining Azure infrastructure. A Bicep file has already been created for you to use and will be provided by your coach. The Bicep file will:
 
-- create a serverless instance of Azure Cosmos DB for MongoDB.
-- create the resources to support an Azure Container App.
-- create the Azure Container App with a default image.
-- configure the Azure Container App with the connection string for the Azure Cosmos DB for MongoDB database.
+Este desafío utiliza [Azure Bicep](https://learn.microsoft.com/es-es/azure/azure-resource-manager/bicep/overview?tabs=bicep), que es un lenguaje específico de dominio para definir la infraestructura de Azure. Ya se ha creado un archivo Bicep para que lo uses, lo purdes encontrar en el repositorio template que estamos usando. El archivo Bicep:
+
+- Crea una instancia serverless de Azure Cosmos DB para MongoDB.
+- Crea los recursos para soportar una Azure Container App.
+- Crea la Azure Container App con una imagen predeterminada.
+- Configurará la Azure Container App con la cadena de conexión para Azure Cosmos DB para MongoDB.
 
 The Bicep file accepts one parameter named `prefixName`, which is to be set to 5 random alphanumeric characters. This will ensure all resources created have a unique name.
 
-As you go through the challenge, you will need to utilize the following pieces of information, and store them in the repository as appropriate:
+A medida que avances en el desafío, necesitarás utilizar la siguiente información y almacenarla en el repositorio según corresponda:
 
 | Name                   | Description                                                         |
 | ---------------------- | ------------------------------------------------------------------- |
-| **location**           | Use **westus** for the location/region of the resource group        |
-| `prefixName`           | 5 characters alphanumeric characters you will create                |
-| **AZURE_CREDENTIALS**  | The credentials to use for managing Azure resources in the workflow |
-| **AZURE_SUBSCRIPTION** | The ID of your Azure subscription                                   |
-| **AZURE_RG**           | The name of the Azure resource group you create                     |
-| **AZURE_PREFIX**       | The prefix you created earlier                                      |
+| **location**           | Usa **westus** para la ubicación/región del grupo de recursos       |
+| `prefixName`           | 5 caracteres alfanuméricos que crearás                 |
+| **AZURE_CREDENTIALS**  | Las credenciales para usar en la gestión de recursos de Azure en el flujo de trabajo |
+| **AZURE_SUBSCRIPTION** | El ID de tu suscripción a Azure                                  |
+| **AZURE_RG**           | El nombre del grupo de recursos de Azure que creas                      |
+| **AZURE_PREFIX**       | El prefijo que creaste anteriormente                                           |
+
     
-## Success Criteria
+## Criterios de Éxito
 
-- Demonstrate that you created the resource group on Azure for the cloud resources for the application
-- Demonstrate that you properly stored the values necessary for the workflow in the repository, encrypting the values which are sensitive
-- Demonstrate that you created a new GitHub workflow named **create-azure-resources.yml** with the following options:
-  - Workflow can be run manually
-  - Reads the prefix and other parameters from secrets and variables
-- Demonstrate that navigating to the URL for the Azure Container App displays a screen with the message **Welcome to Azure Container Apps**
+- Demuestra que has encontrado la información del grupo de recursos en Azure para los recursos de la aplicación en el repositorio asignado.
+- Demuestra que has almacenado correctamente los valores necesarios para el flujo de trabajo en el repositorio, cifrando los valores que son sensibles.
+- Demuestra que has creado un nuevo GitHub workflow llamado **create-azure-resources.yml** con las siguientes opciones:
+  - El GitHub workflow puede ser ejecutado manualmente.
+  - Lee el prefijo y otros parámetros desde secretos y variables.
+- Demuestra que al navegar a la URL de la Aplicación Contenedor de Azure se muestra una pantalla con el mensaje **Welcome to Azure Container Apps**.
 
-> **IMPORTANT:** The default image configured in the Bicep file has the appropriate message configured. **No** code needs to be updated in the application. You will deploy the application in a later challenge.
+> **IMPORTANTE:** La imagen predeterminada configurada en el archivo Bicep tiene el mensaje apropiado configurado. **No** es necesario actualizar el código en la aplicación. Desplegarás la aplicación en un reto posterior.
 
-## Learning Resources
+## Recursos de Aprendizaje
 
-- [What is Infrastructure as Code?](https://docs.microsoft.com/azure/devops/learn/what-is-infrastructure-as-code)
-- [Introduction to GitHub Actions](https://docs.github.com/actions/learn-github-actions/understanding-github-actions)
-- [Deploy Bicep files by using GitHub Actions](https://learn.microsoft.com/azure/azure-resource-manager/bicep/deploy-github-actions?tabs=userlevel%2CCLI)
-- [Manually running a workflow](https://docs.github.com/actions/managing-workflow-runs/manually-running-a-workflow)
-- [GitHub Actions contexts](https://docs.github.com/en/actions/learn-github-actions/contexts)
-- [GitHub Actions encrypted secrets](https://docs.github.com/actions/security-guides/encrypted-secrets)
-- [GitHub Actions variables](https://docs.github.com/en/actions/learn-github-actions/variables)
+- [¿Qué es la infraestructura como código (IaC)?](https://learn.microsoft.com/es-es/devops/deliver/what-is-infrastructure-as-code)
+- [Entender las GitHub Actions](https://docs.github.com/es/actions/learn-github-actions/understanding-github-actions)
+- [Guía de inicio rápido: implementación de archivos de Bicep mediante Acciones de GitHub](https://learn.microsoft.com/es-es/azure/azure-resource-manager/bicep/deploy-github-actions?tabs=CLI%2Cuserlevel)
+- [Ejecutar un flujo de trabajo manualmente](https://docs.github.com/es/actions/using-workflows/manually-running-a-workflow)
+- [GitHub Actions contexts](https://docs.github.com/es/actions/learn-github-actions/contexts)
+- [Uso de secretos en Acciones de GitHub](https://docs.github.com/es/actions/security-guides/using-secrets-in-github-actions)
+- [GitHub Actions variables](https://docs.github.com/es/actions/learn-github-actions/variables)
 - [Create Actions secrets using GitHub CLI](https://cli.github.com/manual/gh_secret_set)
