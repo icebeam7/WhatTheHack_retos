@@ -1,66 +1,63 @@
 # Challenge 02 - OpenAI Models & Capabilities
 
-[< Previous Challenge](./Challenge-01.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-03.md)
+[< Reto Anterior ](./Challenge-01.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-03.md)
 
-## Introduction
+## Introducción
 
-In this challenge, you will learn about the different capabilities of OpenAI models and learn how to choose the best model for your use case.
+En este desafío, aprenderás sobre las diferentes capacidades de los modelos de OpenAI y cómo elegir el mejor modelo para tu caso de uso.
 
-You are going to compare gpt3.5 to gpt4 model in this challenge. If you do not have gpt-4 access, you can compare the legacy models if they are deployed, or go through this challenge conceptually to understand how to best pick a model from the ones you have deployed as well as the ones in the model catalog.
+Compararás el modelo gpt3.5 con el modelo gpt4 en este desafío.
 
-In a world where the availability and development of models are always changing, the model we compare may change over time. But we encourage you to understand the general concepts and material in this Challenge because the comparison techniques utilized can be applicable to scenarios where you are comparing Large Language Models. For more information on legacy models and additional models, reference the [documentation](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/legacy-models) and [Azure model catalog](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-foundation-models?view=azureml-api-2) for more details.
+En un mundo donde la disponibilidad y el desarrollo de modelos están siempre cambiando, el modelo que comparamos puede cambiar con el tiempo. Sin embargo, te animamos a entender los conceptos generales y el material de este Desafío porque las técnicas de comparación utilizadas pueden ser aplicables a escenarios donde estás comparando Modelos de Lenguaje de Gran Escala. Para obtener más información sobre modelos legados y modelos adicionales, consulta la [documentación](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/legacy-models) y el [catálogo de modelos de Azure](https://learn.microsoft.com/en-us/azure/machine-learning/how-to-use-foundation-models?view=azureml-api-2) para más detalles.
 
-## Description
-Model deployment for the challenge:
-- Deploy the following models in your Azure OpenAI resource using these names: 
+## Descripción
+Despliegue de modelos para el desafío:
+- Despliega los siguientes modelos en tu recurso de Azure OpenAI utilizando estos nombres:
   - `gpt-4`
   - `gpt-35-turbo`
- **If you do not have gpt-4 access, you can still go through this challenge conceptually to understand how to best pick a model from the ones you have deployed as well as the ones in the model catalog.**
 
-- Add required credentials of Azure resources in the `.env` file
+- Añade las credenciales requeridas de los recursos de Azure en el archivo `.env`
 
-Questions you should be able to answer by the end of this challenge:
-- What are the capacities of each Azure OpenAI model?
-- How to select the right model for your application?
-- What model would you select to summarize prompts？
-- What model would you select to generate new names?
-- How to retrieve embeddings?
+Preguntas que deberías poder responder al final de este desafío:
+- ¿Cuáles son las capacidades de cada modelo de Azure OpenAI?
+- ¿Cómo seleccionar el modelo adecuado para tu aplicación?
+- ¿Qué modelo elegirías para resumir prompts?
+- ¿Qué modelo elegirías para generar nuevos nombres?
+- ¿Cómo recuperar embeddings?
 
-You will run the following Jupyter notebook for this challenge:
-
+Ejecutarás el siguiente Jupyter Notebook para este reto:
 - `CH-02-ModelComparison.ipynb`
 
-The file can be found in your Codespace under the `/notebooks` folder. 
-If you are working locally or in the Cloud, you can find it in the `/notebooks` folder of `Resources.zip` file. 
+El archivo se puede encontrar en tu Codespace bajo la carpeta `/notebooks`.
 
-To run a Jupyter notebook, navigate to it in your Codespace or open it in VS Code on your local workstation. You will find further instructions for the challenge, as well as in-line code blocks that you will interact with to complete the tasks for the challenge.  Return here to the student guide after completing all tasks in the Jupyter notebook to validate you have met the [success criteria](#success-criteria) below for this challenge.
 
-Sections in this Challenge:
-1. Overview on finding the right model
-- 1.1 Model Families
-- 1.2 Model Capacities
-- 1.3 Pricing Details
-- 1.4 Quotas and Limits
-- 1.5 Model Best Use Cases
-- 1.6 Model Selection Best Practices
-2. Implementation
+Regresa aquí después de completar todas las tareas en el Jupyter Notebook para validar que has cumplido con los [criterios de éxito](#success-criteria) para este desafío.
 
-- 2.0 Helper Functions
-- 2.1 Summarize Text
-- 2.2 Summarization for a targeted audience
-- 2.3 Summarize Cause & Effect
-- 2.4 Generate Nick Names
-- 2.5 Embeddings
+Secciones en este Desafío:
+1. Visión general sobre cómo encontrar el modelo adecuado
+   - 1.1 Familias de Modelos
+   - 1.2 Capacidades de los Modelos
+   - 1.3 Detalles de Precios
+   - 1.4 Cuotas y Límites
+   - 1.5 Mejores Usos de los Modelos
+   - 1.6 Mejores Prácticas para la Selección de Modelos
+2. Implementación
+   - 2.0 Funciones Auxiliares
+   - 2.1 Resumir Texto
+   - 2.2 Resumen para una audiencia específica
+   - 2.3 Resumir Causa y Efecto
+   - 2.4 Generar Apodos
+   - 2.5 Embeddings
 
-## Success Criteria
+## Criterios de Éxito
 
-To complete this challenge successfully, you should be able to:
-- Show an understanding of each model and its suitable use cases
-- Show an understanding of differences between models
-- Select the most suitable model to apply under different scenarios
-- Make all  code cells run successfully
+Para completar este desafío con éxito, deberías ser capaz de:
+- Demostrar un entendimiento de cada modelo y sus casos de uso adecuados
+- Mostrar un entendimiento de las diferencias entre modelos
+- Seleccionar el modelo más adecuado para aplicar en diferentes escenarios
+- Ejecutar correctamente todas las celdas de código
 
-## Additional Resources
+## Recursos Adicionales
 
 - [Overview of Azure OpenAI Models](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/models)
 - [Azure OpenAI Pricing Page](https://azure.microsoft.com/en-us/pricing/details/cognitive-services/openai-service/)
