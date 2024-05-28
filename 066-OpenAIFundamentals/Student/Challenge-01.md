@@ -1,60 +1,48 @@
 # Challenge 01 - Prompt Engineering
 
-[< Previous Challenge](./Challenge-00.md) -  **[Home](../README.md)** - [Next Challenge >](./Challenge-02.md)
+[< Reto Anterior](./Challenge-00.md) -  **[Home](../README.md)** - [Siguiente reto >](./Challenge-02.md)
 
-## Prerequisites
+## Prerrequisitos
 
-* Deploy your own AOAI models in the [AOAI portal](https://oai.azure.com/portal/)
-* Update the `.env.sample` file (and save as `.env`) according to your model names if you haven't already
+* Despliega tus propios modelos AOAI en el [portal AOAI](https://oai.azure.com/portal/).
+* Actualiza el archivo `.env.sample` (y guárdalo como `.env`) según los nombres de tus modelos si aún no lo has hecho.
 
-## Introduction
+## Introducción
 
-As LLMs grow in popularity and use around the world, the need to manage and monitor their outputs becomes increasingly important. In this challenge, you will learn how to use prompt engineering techniques to generate desired results for LLMs.
+A medida que los Modelos de Lenguaje de Gran Escala (LLMs) ganan popularidad y uso en todo el mundo, la necesidad de gestionar y monitorear sus resultados se vuelve cada vez más importante. En este desafío, aprenderás a usar técnicas de 'prompt engineering' para generar los resultados deseados para los LLMs.
 
-## Description
-Model deployment for the challenge:
-- Deploy the following models in your Azure OpenAI resource. 
+## Descripción
+Despliegue de modelos para el desafío:
+- Despliega los siguientes modelos en tu recurso de Azure OpenAI:
   - `gpt-4`
   - `gpt-35-turbo`
 
-    
-**NOTE:** For model families currently available, please reference this link for more information: [Azure OpenAI Service models](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models).
+**NOTA:** Para las familias de modelos actualmente disponibles, por favor consulta este enlace para más información: [Modelos del Servicio Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/models).
 
-Some models are not available for new deployments beginning **July 6, 2023**. Deployments created prior to July 6, 2023 remain available to customers until **July 5, 2024**. You may revise the environment file and the model you deploy accordingly. Please refer to the following link for more details: [Azure OpenAI Service legacy models](https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/legacy-models)
-- Add required credentials of Azure resources in the ``.env`` file. Please feel free to make any modifications as needed and then rename the `.env-sample` file to `.env`.
-  
-Questions you should be able to answer by the end of this challenge:
-- What is the iterative prompting principle?
-- Which hyperparameters could you tune to make the response more diverse in language?
-- What prompt engineering technique could you use to help model complete hard tasks like math problems?
+- Añade las credenciales requeridas de los recursos de Azure en el archivo ``.env``. Siéntete libre de hacer cualquier modificación necesaria y luego renombra el archivo `.env-sample` a `.env`.
 
-You will run the following Jupyter notebook to complete the tasks for this challenge:
+Preguntas que deberías ser capaz de responder al final de este desafío:
+- ¿Qué es el principio de la iteración en los prompts?
+- ¿Qué hiperparámetros podrías ajustar para hacer que la respuesta sea más diversa en términos de lenguaje?
+- ¿Qué técnica de 'prompt engineering' podrías usar para ayudar al modelo a completar tareas difíciles como problemas matemáticos?
+
+Ejecutarás el siguiente cuaderno de Jupyter para completar las tareas de este desafío:
 - `CH-01-PromptEngineering.ipynb`
 
-The file can be found in your Codespace under the `/notebooks` folder. 
-If you are working locally or in the Cloud, you can find it in the `/notebooks` folder of `Resources.zip` file. 
+El archivo se puede encontrar en tu Codespace bajo la carpeta `/notebooks`.
 
-To run a Jupyter notebook, navigate to it in your Codespace or open it in VS Code on your local workstation. You will find further instructions for the challenge, as well as in-line code blocks that you will interact with to complete the tasks for the challenge.  Return here to the student guide after completing all tasks in the Jupyter notebook to validate you have met the [success criteria](#success-criteria) below for this challenge.
+Secciones en este Desafío:
+1. Experimentación con Parámetros
+2. Ingeniería de Mensajes del Sistema
+3. Principios de Prompting Iterativo:
 
-Sections in this Challenge:
-1. Parameter Experimentation
-2. System Message Engineering
-3. Iterative Prompting Principles: 
-
-   3.1 Write clear and specific instructions
+   3.1 Escribe instrucciones claras y específicas
    
-   3.2 Give the model time to “think”
-
-## Success Criteria
-To complete this challenge successfully:
-- Demonstrate understanding of types of tasks OpenAI models are capable of
-- Demonstrate understanding of different hyperparameters in OpenAI models
-- Demonstrate understanding of different using scenarios of prompt engineering techniques
-- Be able to perform iterative prompting practice in exercise
-- Make all the code cells run successfully
+   3.2 Dale al modelo tiempo para "pensar"
 
 
-## Additional Resources
+
+## Recursos Adicionales
 - [Introduction to prompt engineering](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/prompt-engineering)
 - [Prompt engineering techniques](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/advanced-prompt-engineering?pivots=programming-language-chat-completions)
 - [System message framework and template recommendations for Large Language Models (LLMs)](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/system-message)
