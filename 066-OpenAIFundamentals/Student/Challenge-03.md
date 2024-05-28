@@ -1,52 +1,48 @@
 # Challenge 03 - Grounding, Chunking, and Embedding
 
-[< Previous Challenge](./Challenge-02.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-04.md)
+[< Reto Anterior](./Challenge-02.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-04.md)
 
 
-## Pre-requisites
+## Prerrequisitos
 
-* Azure Cognitive Search resource for indexing and retrieving relevant information
-* Azure OpenAI service for Generative AI Models and Embedding Models
-* Add required credentials of above resources in `.env` file
-* Install the required libraries in the `requirements.txt` file via ```pip install -r requirements.txt ``` if you have not already.
+* Recurso de Azure Cognitive Search para la indexación y recuperación de información relevante.
+* Servicio de Azure OpenAI para modelos de IA generativos y modelos de incrustación.
+* Añade las credenciales necesarias de los recursos anteriores en el archivo `.env`.
 
-## Introduction
+## Introducción
 
-When working with large language models, it is important to understand how to ground them with the right data. In addition, you will take a look at how to deal with token limits when you have a lot of data. Finally, you will experiment with embeddings. This challenge will teach you all the fundamental concepts - Grounding, Chunking, Embedding - before you see them in play in Challenge 4. Below are brief introductions to the concepts you will learn.
+Al trabajar con modelos de lenguaje de gran tamaño (LLM), es importante entender cómo anclarlos con los datos correctos. Además, examinarás cómo manejar los límites de tokens cuando tienes muchos datos. Finalmente, experimentarás con incrustaciones. Este desafío te enseñará todos los conceptos fundamentales - Anclaje, Segmentación, Incrustación - antes de verlos en acción en el Desafío 4. A continuación, se presentan breves introducciones a los conceptos que aprenderás.
 
-Grounding is a technique used when you want the model to return reliable answers to a given question.
-Chunking is the process of breaking down a large document. It helps limit the amount of information we pass into the model.
-An embedding is an information dense representation of the semantic meaning of a piece of text.
+El anclaje es una técnica utilizada cuando quieres que el modelo devuelva respuestas confiables a una pregunta dada.
+La segmentación es el proceso de desglosar un documento grande. Ayuda a limitar la cantidad de información que pasamos al modelo.
+Una incrustación es una representación densa en información del significado semántico de un texto.
 
-## Description
+## Descripción
 
-Questions you should be able to answer by the end of the challenge:
+Preguntas que deberías poder responder al final del desafío:
 
-- Why is grounding important and how can you ground a LLM model?
-- What is a token limit?
-- How can you deal with token limits? What are techniques of chunking?
-- What do embedding help accomplish?
+- ¿Por qué es importante el anclaje y cómo puedes anclar un modelo LLM?
+- ¿Qué es un límite de tokens?
+- ¿Cómo puedes manejar los límites de tokens? ¿Cuáles son las técnicas de segmentación?
+- ¿Qué logran las incrustaciones?
 
-
-You will run the following three Jupyter notebooks for this challenge:
+Ejecutarás los siguientes tres cuadernos de Jupyter para este desafío:
 
 * `CH-03-A-Grounding.ipynb`
 * `CH-03-B-Chunking.ipynb`
 * `CH-03-C-Embeddings.ipynb`
 
-These files can be found in your Codespace under the `/notebooks` folder. 
-If you are working locally or in the Cloud, you can find them in the `/notebooks` folder of `Resources.zip` file. 
+Estos archivos se pueden encontrar en tu Codespace bajo la carpeta `/notebooks`.
 
-To run a Jupyter notebook, navigate to it in your Codespace or open it in VS Code on your local workstation. You will find further instructions for the challenge, as well as in-line code blocks that you will interact with to complete the tasks for the challenge.  Return here to the student guide after completing all tasks in the Jupyter notebook to validate you have met the [success criteria](#success-criteria) below for this challenge.
 
-## Success Criteria
+## Criterios de Éxito
 
-To complete this challenge successfully, you should be able to:
-- Verify that you are able to ground a model through the system message
-- Demonstrate various chunking techniques
-- Demonstrate how to create embeddings 
+Para completar este desafío con éxito, deberías ser capaz de:
+- Verificar que puedes anclar un modelo a través del mensaje del sistema
+- Demostrar diversas técnicas de segmentación
+- Demostrar cómo crear incrustaciones
 
-## Additional Resources 
+## Recursos Adicionales
 
 * [Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857)
 * [Embeddings example](https://github.com/openai/openai-cookbook/blob/main/examples/Embedding_Wikipedia_articles_for_search.ipynb)
