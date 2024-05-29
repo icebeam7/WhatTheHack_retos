@@ -1,51 +1,60 @@
 # Challenge 05 - Responsible AI
 
-[< Previous Challenge](./Challenge-04.md) - **[Home](../README.md)**
+[< reto Anterior](./Challenge-04.md) - **[Home](../README.md)**
 
-## Pre-requisites
+## Prerrequisitos
 
-- Cognitive Search Index implementation from Challenge 4
-- Install required libraries in the `requirements.txt` file via `pip install -r requirements.txt` if you have not already.
+- Implementación del índice de búsqueda cognitiva de reto 4.
 
-## Introduction
+## Introducción
 
-As LLMs grow in popularity and use around the world, the need to manage and monitor their outputs becomes increasingly important. In this challenge, you will learn how to evaluate the outputs of LLMs and how to identify and mitigate potential biases in the model.
+A medida que los Modelos de Lenguaje de Gran Tamaño (LLMs) crecen en popularidad y uso en todo el mundo, la necesidad de gestionar y monitorear sus resultados se vuelve cada vez más importante. En este reto, aprenderás cómo evaluar los resultados de los LLMs y cómo identificar y mitigar posibles sesgos en el modelo.
 
-## Description
+## Descripción
 
-Questions you should be able to answer by the end of this challenge:
-- What are services and tools to identify and evaluate harms and data leakage in LLMs?
-- What are ways to evaluate truthfulness and reduce hallucinations?
-- What are methods to evaluate a model if you don't have a ground truth dataset for comparison?
+Preguntas que deberías poder responder al final de este reto:
+- ¿Qué servicios y herramientas existen para identificar y evaluar daños y fugas de datos en LLMs?
+- ¿Cuáles son las formas de evaluar la veracidad y reducir las alucinaciones?
+- ¿Qué métodos existen para evaluar un modelo si no tienes un conjunto de datos de verdad absoluta para comparar?
 
-Sections in this Challenge:
-1. Identifying harms and detecting Personal Identifiable Information (PII)
-2. Evaluating truthfulness using Ground-Truth Datasets
-3. Evaluating truthfulness using GPT without Ground-Truth Datasets
+Secciones en este reto:
+1. Identificación de daños y detección de Información Personal Identificable (PII)
+2. Evaluación de la veracidad utilizando Conjuntos de Datos de Verdad Absoluta
+3. Evaluación de la veracidad utilizando GPT sin Conjuntos de Datos de Verdad Absoluta
 
-You will run the following Jupyter notebook for this challenge:
+Ejecutarás el siguiente Jupyter Notebook para este reto:
 
 - `CH-05-ResponsibleAI.ipynb`
 
-The file can be found in your Codespace under the `/notebooks` folder. 
-If you are working locally or in the Cloud, you can find it in the `/notebooks` folder of `Resources.zip` file. 
+El archivo se puede encontrar en tu Codespace bajo la carpeta `/notebooks`.
 
-To run a Jupyter notebook, navigate to it in your Codespace or open it in VS Code on your local workstation. You will find further instructions for the challenge, as well as in-line code blocks that you will interact with to complete the tasks for the challenge.  Return here to the student guide after completing all tasks in the Jupyter notebook to validate you have met the [success criteria](#success-criteria) below for this challenge.
+Regresa aquí a la guía del estudiante después de completar todas las tareas en el Jupyter Notebook para validar que has cumplido con los criterios de éxito para este reto.
 
-## Success Criteria
+## Criterios de Éxito
 
-To complete this challenge successfully, you should be able to:
-- Articulate Responsible AI principles with OpenAI
-- Demonstrate methods and approaches for evaluating LLMs
-- Identify tools available to identify and mitigate harms in LLMs
+Para completar este reto con éxito, deberías ser capaz de:
+- Articular los principios de IA Responsable con OpenAI.
+- Demostrar métodos y enfoques para evaluar LLMs.
+- Identificar herramientas disponibles para identificar y mitigar daños en LLMs.
 
-## Additional Resources
+## Recursos Adicionales
 
-- [Overview of Responsible AI practices for Azure OpenAI models](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/overview)
-- [Azure Cognitive Services - What is Content Filtering](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter)
-- [Azure AI Content Safety tool](https://learn.microsoft.com/en-us/azure/cognitive-services/content-safety/overview)
-- [Azure Content Safety Annotations feature](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter#annotations-preview)
-- [OpenAI PII Detection Plugin](https://github.com/openai/chatgpt-retrieval-plugin/tree/main#plugins)
-- [Hugging Face Evaluate Library](https://huggingface.co/docs/evaluate/index)
-- [Question Answering Evaluation using LangChain](https://python.langchain.com/en/latest/use_cases/evaluation/qa_generation.html)
-- [OpenAI Technical Whitepaper on evaluating models (see Section 3.1)](https://cdn.openai.com/papers/gpt-4-system-card.pdf)
+- [Visión General de las Prácticas de IA Responsable para Modelos de Azure OpenAI](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/overview)
+- [Servicios Cognitivos de Azure - Qué es el Filtrado de Contenido](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter)
+- [Herramienta de Seguridad de Contenido de Azure AI](https://learn.microsoft.com/en-us/azure/cognitive-services/content-safety/overview)
+- [Función de Anotaciones de Seguridad de Contenido de Azure](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter#annotations-preview)
+- [Plugin de Detección de PII de OpenAI](https://github.com/openai/chatgpt-retrieval-plugin/tree/main#plugins)
+- [Biblioteca Evaluate de Hugging Face](https://huggingface.co/docs/evaluate/index)
+- [Evaluación de Respuestas a Preguntas Usando LangChain](https://python.langchain.com/en/latest/use_cases/evaluation/qa_generation.html)
+- [Documento Técnico de OpenAI sobre Evaluación de Modelos (ver Sección 3.1)](https://cdn.openai.com/papers/gpt-4-system-card.pdf)
+
+
+## Agradecimientos Finales
+
+¡Muchas gracias por haber sido parte de este desafío sobre OpenAI y Azure que preparamos para ti hoy! Estamos muy felices de que hayas llegado hasta el final y queremos reconocer tu esfuerzo. Como agradecimiento, tenemos un regalo especial para ti. Por favor, busca a alguien de nuestro equipo para recibirlo.
+
+Nos encantaría saber qué te pareció este taller. Te invitamos a completar este [formulario anónimo](https://docs.google.com/forms/d/e/1FAIpQLSfQNftvozuCRmnuSOvPWaa6hYvc0FfUxu7VH6wLUuJ8upOU2A/viewform). Tu opinión es muy valiosa y nos tomará solo dos minutos de tu tiempo. Tus comentarios nos ayudarán a mejorar y a seguir ofreciendo experiencias enriquecedoras en futuras ediciones.
+
+Finalmente, nuestros amigos de Microsoft desean recordarte que tienen un newsletter increíble para desarrolladores. Si estás interesado en mantenerse al tanto de las novedades que tienen para ofrecer, puedes suscribirte [aquí](https://aka.ms/AAqcy98).
+
+¡Gracias una vez más por tu participación y esperamos verte en futuros eventos!
