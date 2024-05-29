@@ -1,64 +1,62 @@
 # Challenge 04 - Retrieval Augmented Generation (RAG) 
 
-[< Previous Challenge](./Challenge-03.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-05.md)
+[< Reto Anterior](./Challenge-03.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-05.md)
 
-## Pre-requisites 
+## Prerrequisitos
 
-- Azure Form Recognizer resource for extracting text from raw unstructured data
-- Azure Cognitive Search resource for indexing and retrieving relevant information
-- Azure OpenAI service for Generative AI Models and Embedding Models
-- Add required credentials of above resources in `.env` file 
-- Install the required libraries in the `requirements.txt` file via ```pip install -r requirements.txt ``` if you have not already
+- Recurso de Azure Form Recognizer para extraer texto de datos no estructurados en bruto.
+- Recurso de Azure Cognitive Search para la indexación y recuperación de información relevante.
+- Servicio de Azure OpenAI para modelos de IA generativos y modelos de incrustación.
+- Añade las credenciales necesarias de los recursos anteriores en el archivo `.env`.
 
-## Introduction
+## Introducción
 
-Knowledge bases are widely used in enterprises and can contain an extensive number of documents across various categories. Retrieving relevant content based on user queries is a challenging task. Traditionally, methods like Page Rank have been employed to accurately retrieve information at the document level. However, users still need to manually search within the document to find the specific and relevant information they need. The recent advancements in Foundation Models, such as the one developed by OpenAI, offer a solution through the use of "Retrieval Augmented Generation" techniques and encoding information like "Embeddings." These methods aid in finding the relevant information and then to answer or summarize the content to present to the user in a concise and succinct manner.
+Las bases de conocimiento son ampliamente utilizadas en las empresas y pueden contener un número extenso de documentos en diversas categorías. Recuperar contenido relevante basado en consultas de usuarios es una tarea desafiante. Tradicionalmente, métodos como Page Rank han sido empleados para recuperar información de manera precisa a nivel de documento. Sin embargo, los usuarios aún necesitan buscar manualmente dentro del documento para encontrar la información específica y relevante que necesitan. Los recientes avances en Modelos de Base, como los desarrollados por OpenAI, ofrecen una solución a través del uso de técnicas de "Generación Aumentada por Recuperación" y codificación de información como "Incrustaciones". Estos métodos ayudan a encontrar la información relevante y luego responder o resumir el contenido para presentarlo al usuario de manera concisa y sucinta.
 
-Retrieval augmented generation (RAG) is an innovative approach that combines the power of retrieval-based Knowledge bases, such as Azure Cognitive Search, and generative Large Language Models (LLMs), such as Azure OpenAI ChatGPT, to enhance the quality and relevance of generated outputs. This technique involves integrating a retrieval component into a generative model, enabling the retrieval of contextual and domain-specific information from the knowledge base. By incorporating this contextual knowledge alongside the original input, the model can generate desired outputs, such as summaries, information extraction, or question answering. In essence, the utilization of RAG with LLMs allows you to generate domain-specific text outputs by incorporating specific external data as part of the context provided to the LLMs.
+La generación aumentada por recuperación (RAG, por sus siglas en inglés) es un enfoque innovador que combina el poder de las bases de conocimiento basadas en recuperación, como Azure Cognitive Search, y modelos de lenguaje de gran tamaño (LLMs), como Azure OpenAI ChatGPT, para mejorar la calidad y relevancia de los resultados generados. Esta técnica implica integrar un componente de recuperación en un modelo generativo, permitiendo la recuperación de información contextual y específica del dominio desde la base de conocimiento. Al incorporar este conocimiento contextual junto con la entrada original, el modelo puede generar resultados deseados, como resúmenes, extracción de información o respuesta a preguntas. En esencia, la utilización de RAG con LLMs te permite generar salidas de texto específicas del dominio incorporando datos externos específicos como parte del contexto proporcionado a los LLMs.
 
-RAG aims to overcome limitations found in purely generative models, including issues of factual accuracy, relevance, and coherence, often seen in the form of "hallucinations". By integrating retrieval into the generative process, RAG seeks to mitigate these challenges. The incorporation of retrieved information serves to "ground" the large language models (LLMs), ensuring that the generated content better aligns with the intended context, enhances factual correctness, and produces more coherent and meaningful outputs.
+RAG busca superar las limitaciones encontradas en modelos puramente generativos, incluyendo problemas de precisión factual, relevancia y coherencia, a menudo vistos en forma de "alucinaciones". Al integrar la recuperación en el proceso generativo, RAG busca mitigar estos desafíos. La incorporación de información recuperada sirve para "anclar" los modelos de lenguaje de gran tamaño (LLMs), asegurando que el contenido generado se alinee mejor con el contexto previsto, mejore la corrección factual y produzca resultados más coherentes y significativos.
 
-## Description
+## Descripción
 
-Questions you should be able to answer by the end of the challenge:
+Preguntas que deberías poder responder al final del reto:
 
-- How do we create ChatGPT-like experiences on Enterprise data? In other words, how do we "ground" powerful Large Language Models (LLMs) to primarily our own data?
-- Why is the combination of retrieval and generation steps so important and how do they allow integration of knowledge bases and LLMs for downstream AI tasks?
-- Given the token limit constraints, how does RAG approach help in dealing with long and complex documents?
-- How can this approach be applied to wide range of applications such as question answering, summarization, dialogue systems, and content generation?
+- ¿Cómo creamos experiencias similares a ChatGPT con datos empresariales? En otras palabras, ¿cómo "anclamos" Modelos de Lenguaje de Gran Tamaño (LLMs) principalmente a nuestros propios datos?
+- ¿Por qué es tan importante la combinación de los pasos de recuperación y generación y cómo permiten la integración de bases de conocimiento y LLMs para tareas de IA descendentes?
+- Dadas las limitaciones del límite de tokens, ¿cómo ayuda el enfoque RAG a manejar documentos largos y complejos?
+- ¿Cómo se puede aplicar este enfoque a una amplia gama de aplicaciones como respuesta a preguntas, resumen, sistemas de diálogo y generación de contenido?
 
-Some Considerations:
+Algunas consideraciones:
 
-- **Evaluation challenges:** Evaluating the performance of RAG poses challenges, as traditional metrics may not fully capture the improvements achieved through retrieval. Developing task-specific evaluation metrics or conducting human evaluations can provide more accurate assessments of the quality and effectiveness of the approach.
-- **Ethical considerations:** While RAG provides powerful capabilities, it also introduces ethical considerations. The retrieval component should be carefully designed and evaluated to avoid biased or harmful information retrieval. Additionally, the generated content should be monitored and controlled to ensure it aligns with ethical guidelines and does not propagate misinformation or harmful biases.
+- **Desafíos de evaluación:** Evaluar el rendimiento de RAG presenta desafíos, ya que las métricas tradicionales pueden no capturar completamente las mejoras logradas a través de la recuperación. Desarrollar métricas de evaluación específicas para la tarea o realizar evaluaciones humanas puede proporcionar evaluaciones más precisas de la calidad y efectividad del enfoque.
+- **Consideraciones éticas:** Aunque RAG proporciona capacidades poderosas, también introduce consideraciones éticas. El componente de recuperación debe ser cuidadosamente diseñado y evaluado para evitar la recuperación de información sesgada o dañina. Además, el contenido generado debe ser monitoreado y controlado para asegurar que se alinee con las pautas éticas y no propague desinformación o sesgos dañinos.
 
-You will run the following two Jupyter notebooks for this challenge:
+Ejecutarás los siguientes dos Jupyter Notebook para este desafío:
 
-- `CH-04-A-RAG_for_structured_data.ipynb` 
+- `CH-04-A-RAG_for_structured_data.ipynb`
 - `CH-04-B-RAG_for_unstructured_data.ipynb`
 
-These files can be found in your Codespace under the `/notebooks` folder. 
-If you are working locally or in the Cloud, you can find them in the `/notebooks` folder of `Resources.zip` file. 
+Estos archivos se pueden encontrar en tu Codespace bajo la carpeta `/notebooks`.
 
-To run a Jupyter notebook, navigate to it in your Codespace or open it in VS Code on your local workstation. You will find further instructions for the challenge, as well as in-line code blocks that you will interact with to complete the tasks for the challenge.  Return here to the student guide after completing all tasks in the Jupyter notebook to validate you have met the [success criteria](#success-criteria) below for this challenge.
+Regresa aquí a la guía del estudiante después de completar todas las tareas en el cuaderno de Jupyter para validar que has cumplido con los criterios de éxito para este desafío.
 
-## Success Criteria
-
-To complete this challenge successfully, you should be able to:
-- Verify that you have extracted text from raw unstructured data using the Azure Document Intelligence API into a more structured format such as JSON
-- Verify that you have created an index using Azure Cognitive Search based on the type of data you are dealing with and load data into the index.
-- Demonstrate the use of Iterative Prompt Development to write effective prompts for your AI tasks
+## Criterios de éxito
 
 
-## Learning Resources
+Para completar este desafío con éxito, deberías ser capaz de:
+- Verificar que has extraído texto de datos no estructurados usando la API de Azure Document Intelligence en un formato más estructurado como JSON.
+- Verificar que has creado un índice usando Azure Cognitive Search basado en el tipo de datos con los que estás trabajando y cargar datos en el índice.
+- Demostrar el uso del Desarrollo de Prompts Iterativos para escribir prompts efectivos para tus tareas de IA.
 
-- [Use OpenAI GPT with your Enterprise Data](https://techcommunity.microsoft.com/t5/startups-at-microsoft/use-openai-gpt-with-your-enterprise-data/ba-p/3817141)
-- [ChatGPT + Enterprise data with Azure OpenAI and Cognitive Search](https://github.com/Azure-Samples/azure-search-openai-demo)
-- [Build Industry-Specific LLMs Using Retrieval Augmented Generation](https://towardsdatascience.com/build-industry-specific-llms-using-retrieval-augmented-generation-af9e98bb6f68)
+## Recursos de Aprendizaje
 
-## Advanced Challenges (Optional)
+- [Usar OpenAI GPT con tus Datos Empresariales](https://techcommunity.microsoft.com/t5/startups-at-microsoft/use-openai-gpt-with-your-enterprise-data/ba-p/3817141)
+- [ChatGPT + Datos Empresariales con Azure OpenAI y Cognitive Search](https://github.com/Azure-Samples/azure-search-openai-demo)
+- [Construir LLMs Específicos de la Industria Usando Generación Aumentada por Recuperación](https://towardsdatascience.com/build-industry-specific-llms-using-retrieval-augmented-generation-af9e98bb6f68)
 
-Too comfortable?  Eager to do more?  Try these additional challenges!
+## Desafíos Avanzados (Opcional)
 
-- Think about how you can evaluate your answers and the performance of RAG. What are some techniques you can apply?
-- Think about how you can moderate harmful user questions, avoid biases, and mitigate prompt injection attacks.
+¿Te sientes demasiado cómodo? ¿Ansioso por hacer más? ¡Intenta estos desafíos adicionales!
+
+- Piensa en cómo puedes evaluar tus respuestas y el rendimiento de RAG. ¿Qué técnicas puedes aplicar?
+- Piensa en cómo puedes moderar preguntas dañinas de los usuarios, evitar sesgos y mitigar ataques de inyección de prompts.
