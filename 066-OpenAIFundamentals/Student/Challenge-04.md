@@ -1,4 +1,4 @@
-# Challenge 04 - Retrieval Augmented Generation (RAG) 
+# Reto 04: Generación Aumentada por Recuperación (RAG) 
 
 [< Reto Anterior](./Challenge-03.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-05.md)
 

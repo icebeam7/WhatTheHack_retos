@@ -1,4 +1,4 @@
-# Challenge 02 - OpenAI Models & Capabilities
+# Reto 02: Modelos y Capacidades de OpenAI
 
 [< Reto Anterior ](./Challenge-01.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-03.md)
 
@@ -31,7 +31,7 @@ Ejecutarás el siguiente Jupyter Notebook para este reto:
 El archivo se puede encontrar en tu Codespace bajo la carpeta `/notebooks`.
 
 
-Regresa aquí después de completar todas las tareas en el Jupyter Notebook para validar que has cumplido con los [criterios de éxito](#success-criteria) para este desafío.
+Regresa aquí después de completar todas las tareas en el Jupyter Notebook para validar que has cumplido con los criterios de éxito para este desafío.
 
 Secciones en este Desafío:
 1. Visión general sobre cómo encontrar el modelo adecuado

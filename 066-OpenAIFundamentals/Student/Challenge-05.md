@@ -45,7 +45,6 @@ Para completar este reto con éxito, deberías ser capaz de:
 - [Función de Anotaciones de Seguridad de Contenido de Azure](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/content-filter#annotations-preview)
 - [Plugin de Detección de PII de OpenAI](https://github.com/openai/chatgpt-retrieval-plugin/tree/main#plugins)
 - [Biblioteca Evaluate de Hugging Face](https://huggingface.co/docs/evaluate/index)
-- [Evaluación de Respuestas a Preguntas Usando LangChain](https://python.langchain.com/en/latest/use_cases/evaluation/qa_generation.html)
 - [Documento Técnico de OpenAI sobre Evaluación de Modelos (ver Sección 3.1)](https://cdn.openai.com/papers/gpt-4-system-card.pdf)
 
 

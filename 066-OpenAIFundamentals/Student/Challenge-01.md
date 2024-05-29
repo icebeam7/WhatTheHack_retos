@@ -1,4 +1,4 @@
-# Challenge 01 - Prompt Engineering
+# Reto 01: Prompt Engineerin
 
 [< Reto Anterior](./Challenge-00.md) -  **[Home](../README.md)** - [Siguiente reto >](./Challenge-02.md)
 

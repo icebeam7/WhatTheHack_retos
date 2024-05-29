@@ -1,4 +1,4 @@
-# Challenge 03 - Grounding, Chunking, and Embedding
+# Reto 03: Grounding, Chunking, and Embedding
 
 [< Reto Anterior](./Challenge-02.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-04.md)
 
@@ -46,5 +46,4 @@ Para completar este desafío con éxito, deberías ser capaz de:
 
 * [Grounding LLMs](https://techcommunity.microsoft.com/t5/fasttrack-for-azure/grounding-llms/ba-p/3843857)
 * [Embeddings example](https://github.com/openai/openai-cookbook/blob/main/examples/Embedding_Wikipedia_articles_for_search.ipynb)
-* [Langchain Chunking](https://js.langchain.com/docs/modules/indexes/text_splitters/examples/recursive_character)
   
