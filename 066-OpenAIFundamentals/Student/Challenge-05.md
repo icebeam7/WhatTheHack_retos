@@ -1,4 +1,4 @@
-# Challenge 05 - Responsible AI
+# Reto 05: IA Responsable
 
 [< reto Anterior](./Challenge-04.md) - **[Home](../README.md)**
 
