@@ -12,7 +12,7 @@ Crearás un entorno de desarrollo que cumpla con las necesidades mencionadas ant
 
 Durante el desarrollo, crearás recursos en Azure y configurarás tu repositorio en GitHub utilizando las CLIs de Azure y GitHub. Al inicio del taller, recibirás los detalles necesarios para acceder a todos los recursos de Azure y configurar adecuadamente tu entorno de desarrollo en la nube.
 
-La aplicación utiliza una variable de entorno llamada **MONBODB_URI** para conectarse a la base de datos MongoDB. Al crear tu entorno de desarrollo en la nube, necesitarás agregar esto como un secreto encriptado con el valor **mongodb://localhost**.
+La aplicación utiliza una variable de entorno llamada **MONGODB_URI** para conectarse a la base de datos MongoDB. Al crear tu entorno de desarrollo en la nube, necesitarás agregar esto como un secreto encriptado con el valor **mongodb://localhost**.
 
 Una vez creado el entorno de desarrollo, necesitarás probar la aplicación ejecutando el siguiente comando:
 
@@ -28,7 +28,7 @@ npm run dev
   - MongoDB
 - Has creado un secreto encriptado para MONGODB_URI
 - Eres capaz de inciar y ver la aplicación en el entorno de desarrollo basado en la nube
-- All changes are merged into `main`
+- Todos los cambios se fusionan en 'main'.
 - **No** se instalaron recursos en tu máquina
 
 ## Learning Resources

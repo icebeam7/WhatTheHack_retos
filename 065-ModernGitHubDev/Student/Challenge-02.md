@@ -19,7 +19,6 @@ Para este desafío, crearás un nuevo componente React llamado  **Hours.js** en 
 -Crea el componente Hours añadiendo un archivo llamado **Hours.js** a la carpeta components.
     - Recuerda que te podemos proveer el archivo ya listo si tienesn dudas.
 - La sintaxis para importar el componente Hours en **index.js** es `import Hours from '../components/Hours';`, y se puede colocar debajo de la línea que dice `// TODO: Import Hours component`
-- The syntax to display the `Hours` component in **index.js** is `<Hours />`, and can be added immediately below the line which reads `{/* TODO: Display Hours component */}`.
 - La sintaxis para mostrar el componente `Hours` en **index.js** es `<Hours />`, y se puede añadir inmediatamente debajo de la línea que dice `{/* TODO: Display Hours component */}`}.
 - Para los propósitos de este desafío, puedes leer el día actual desde el navegador sin tener en cuenta la zona horaria del usuario.
 

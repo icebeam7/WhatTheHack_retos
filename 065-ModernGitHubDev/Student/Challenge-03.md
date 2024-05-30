@@ -19,7 +19,7 @@ El escaneo de vulnerabilidades, la ejecución de pruebas y la verificación de q
 - Verificar que la rama `main` esté configurada para requerir pull requests, y que tanto el escaneo de código como la revisión de dependencias deben aprobarse para que se complete un merge.
 - Demostrar que se ha realizado un pull request solicitud a main y que todas las verificaciones han pasado.
 
-> **IMPORTANTE:**  Fusionarás el PR en `main` en un desafío posterior. 
+> **IMPORTANTE:**  Realizar el merge del PR en `main` en un reto posterior. 
 
 ## Recursos de Aprendizaje
 

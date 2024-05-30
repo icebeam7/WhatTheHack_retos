@@ -14,28 +14,14 @@ Para este reto, crearás un [GitHub workflow](https://docs.github.com/es/actions
 
 La Configuración como Código (CaC), o configuración como código, es un enfoque para gestionar la configuración del sistema que implica definir los ajustes de configuración en archivos o scripts legibles por máquinas. Esto permite una gestión más eficiente, automatizada y consistente de la configuración del sistema, ya que los cambios pueden realizarse y desplegarse más fácilmente y con mayor control. Con la configuración como código, los ajustes de configuración se almacenan en archivos controlados por versiones, utilizando a menudo una sintaxis declarativa como YAML, JSON o HCL. Estos archivos pueden almacenarse junto con el código de la aplicación, facilitando la gestión de todo el ciclo de vida del desarrollo del software.
 
-This challenge uses [Azure Bicep](https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep), which is a domain specific language for defining Azure infrastructure. A Bicep file has already been created for you to use and will be provided by your coach. The Bicep file will:
-
-Este desafío utiliza [Azure Bicep](https://learn.microsoft.com/es-es/azure/azure-resource-manager/bicep/overview?tabs=bicep), que es un lenguaje específico de dominio para definir la infraestructura de Azure. Ya se ha creado un archivo Bicep para que lo uses, lo purdes encontrar en el repositorio template que estamos usando. El archivo Bicep:
+Este desafío utiliza [Azure Bicep](https://learn.microsoft.com/es-es/azure/azure-resource-manager/bicep/overview?tabs=bicep), que es un lenguaje específico de dominio para definir la infraestructura de Azure. Ya se ha creado un archivo Bicep para que lo uses. El archivo Bicep:
 
 - Crea una instancia serverless de Azure Cosmos DB para MongoDB.
 - Crea los recursos para soportar una Azure Container App.
 - Crea la Azure Container App con una imagen predeterminada.
 - Configurará la Azure Container App con la cadena de conexión para Azure Cosmos DB para MongoDB.
 
-The Bicep file accepts one parameter named `prefixName`, which is to be set to 5 random alphanumeric characters. This will ensure all resources created have a unique name.
-
-A medida que avances en el desafío, necesitarás utilizar la siguiente información y almacenarla en el repositorio según corresponda:
-
-| Name                   | Description                                                         |
-| ---------------------- | ------------------------------------------------------------------- |
-| **location**           | Usa **westus** para la ubicación/región del grupo de recursos       |
-| `prefixName`           | 5 caracteres alfanuméricos que crearás                 |
-| **AZURE_CREDENTIALS**  | Las credenciales para usar en la gestión de recursos de Azure en el flujo de trabajo |
-| **AZURE_SUBSCRIPTION** | El ID de tu suscripción a Azure                                  |
-| **AZURE_RG**           | El nombre del grupo de recursos de Azure que creas                      |
-| **AZURE_PREFIX**       | El prefijo que creaste anteriormente                                           |
-
+El archivo Bicep acepta un parámetro llamado `prefixName`, que debe configurarse con 5 caracteres alfanuméricos aleatorios. Es importante mencionar que utilicen 5 letras que puedan identificarlos, como las iniciales de su nombre, ya que compartirán el grupo con otros miembros del equipo. La idea es que cada uno realice su despliegue y, con este prefijo, puedan identificarse fácilmente.
     
 ## Criterios de Éxito
 
@@ -45,8 +31,6 @@ A medida que avances en el desafío, necesitarás utilizar la siguiente informac
   - El GitHub workflow puede ser ejecutado manualmente.
   - Lee el prefijo y otros parámetros desde secretos y variables.
 - Demuestra que al navegar a la URL de la Aplicación Contenedor de Azure se muestra una pantalla con el mensaje **Welcome to Azure Container Apps**.
-
-> **IMPORTANTE:** La imagen predeterminada configurada en el archivo Bicep tiene el mensaje apropiado configurado. **No** es necesario actualizar el código en la aplicación. Desplegarás la aplicación en un reto posterior.
 
 ## Recursos de Aprendizaje
 
@@ -58,3 +42,20 @@ A medida que avances en el desafío, necesitarás utilizar la siguiente informac
 - [Uso de secretos en Acciones de GitHub](https://docs.github.com/es/actions/security-guides/using-secrets-in-github-actions)
 - [GitHub Actions variables](https://docs.github.com/es/actions/learn-github-actions/variables)
 - [Create Actions secrets using GitHub CLI](https://cli.github.com/manual/gh_secret_set)
+
+## Tips
+
+Debes agregar en el repositorio los secretos y variables requeridos. Toda esta información la puedes encontrar en el repositorio de GitHub que te compartimos al inicio.
+
+### Secretos a agregar:
+1. **AZURE_CREDENTIALS**: Este es un JSON que contiene las credenciales.
+2. **AZURE_SUBSCRIPTION**: Una cadena que representa el ID de tu suscripción a Azure.
+
+### Variables a agregar:
+1. **AZURE_RG**: Aquí encontrarás el nombre del grupo de recursos a utilizar en el repositorio.
+2. **AZURE_PREFIX**: Recuerda usar tus iniciales o una combinación de 5 caracteres que te identifiquen para poder diferenciar tu proyecto.
+
+Para agregar los secretos y variables:
+1. Ve a la sección de "Secrets and Variables" en tu repositorio de GitHub.
+2. Selecciona "New repository secret" o "New variable" según corresponda.
+3. Introduce los valores necesarios y guarda los cambios.

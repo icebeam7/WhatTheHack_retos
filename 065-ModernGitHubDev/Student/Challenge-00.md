@@ -17,7 +17,7 @@ Durante este desafio, utilizarás características que te permitirán programar 
 
 ## Descripción
 
-El refugio ya cuenta con una aplicación creada por un proveedor que desean utilizar como base para su sitio web. El proyecto actualmente lo puedes encontrar en [GitHub como una plantilla](https://github.com/github/pets-workshop). El primer paso es obtener el código fuente y crear un repositorio en GitHub para mantener una copia separada. Los cambios que realices no se mezclaran con el repositorio original.
+El refugio ya cuenta con una aplicación creada por un proveedor que desean utilizar como base para su sitio web. El proyecto actualmente lo puedes encontrar en [GitHub como una plantilla](https://github.com/WhatTheHack-CF/template_modern_dev_Devops). El primer paso es obtener el código fuente y crear un repositorio en GitHub para mantener una copia separada. Los cambios que realices no se mezclaran con el repositorio original.
 
 <!-- https://github.com/github/pets-workshop recuerda crear el porpio en espaniol para -->
 
