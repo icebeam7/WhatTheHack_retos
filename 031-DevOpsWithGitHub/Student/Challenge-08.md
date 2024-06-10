@@ -1,6 +1,6 @@
 # Challenge 08 – Continuous Delivery (CD)
 
-[< Previous Challenge](Challenge-07.md) - [Home](../README.md) - [Next Challenge >](Challenge-09.md)
+[<  Reto Anterior](Challenge-07.md) - [Home](../README.md) - [Siguiente reto >](Challenge-09.md)
 
 ## Introduction
 
@@ -36,4 +36,4 @@ Extend the workflow you created in Challenge #7 to:
 - [Deploy a custom container to App Service using GitHub Actions](https://docs.microsoft.com/en-us/azure/app-service/deploy-container-github-action?tabs=service-principal#tabpanel_CeZOj-G++Q-3_service-principal)
 - [Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
 
-[< Previous Challenge](Challenge-07.md) - [Home](../README.md) - [Next Challenge >](Challenge-09.md)
+[<  Reto Anterior](Challenge-07.md) - [Home](../README.md) - [Siguiente reto >](Challenge-09.md)

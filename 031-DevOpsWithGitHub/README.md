@@ -22,7 +22,7 @@ Este hack de DevOps con GitHub te ayudará a aprender:
 5. Cómo usar GitHub para seguridad avanzada (Escaneo de código y Dependabot)
 6. Monitoreo de aplicaciones con 'Application Insights'
 
-## Desafíos
+## Desafíos-0
 - Desafío 00: **[Configurar Azure y Herramientas](./Student/Challenge-00.md)**
   - Configura tu entorno para comenzar el hack
 - Desafío 01: **[Configura tu Repositorio](./Student/Challenge-01.md)**

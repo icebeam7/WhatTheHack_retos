@@ -1,6 +1,6 @@
 # Challenge 04 - Your First GitHub Actions Workflow
 
-[< Previous Challenge](Challenge-03.md) - [Home](../README.md) - [Next Challenge >](Challenge-05.md)
+[<  Reto Anterior](Challenge-03.md) - [Home](../README.md) - [Siguiente reto >](Challenge-05.md)
 
 ## Introduction
 
@@ -59,4 +59,4 @@ This challenge will see us using GitHub Actions to write your first workflow. Th
 
 - In your workflow file pass the value from an environment variable into an input of your GitHub Action in job2 
 
-[< Previous Challenge](Challenge-03.md) - [Home](../README.md) - [Next Challenge >](Challenge-05.md)
+[<  Reto Anterior](Challenge-03.md) - [Home](../README.md) - [Siguiente reto >](Challenge-05.md)

@@ -1,6 +1,6 @@
 # Challenge 11 – Monitoring: Application Insights
 
-[< Previous Challenge](Challenge-10.md) - [Home](../README.md)
+[< Reto Anterior](Challenge-10.md) - [Home](../README.md)
 
 ## Introduction
 
@@ -35,4 +35,4 @@ In this challenge we will look at some of the telemetry that has already been co
 
     - **NOTE**: It takes a min or two after an event happens for it to make its way to Application Insights and for it to be indexed so you can see it in the portal.
 
-[< Previous Challenge](Challenge-10.md) - [Home](../README.md)
+[<  Reto Anterior](Challenge-10.md) - [Home](../README.md)

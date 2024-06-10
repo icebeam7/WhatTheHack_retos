@@ -1,6 +1,6 @@
 # Challenge 05 - Infrastructure as Code (IaC)
 
-[< Previous Challenge](Challenge-04.md) - [Home](../README.md) - [Next Challenge >](Challenge-06.md)
+[<  Reto Anterior](Challenge-04.md) - [Home](../README.md) - [Siguiente reto >](Challenge-06.md)
 
 ## Introduction
 
@@ -81,4 +81,4 @@ Instead of changing the environment variable for each environment that we want t
    - [Infrastructure As Code: Terraform](https://microsoft.github.io/WhatTheHack/012-InfraAsCode-Terraform/Student/)
    - [Infrastructure As Code: Ansible](https://microsoft.github.io/WhatTheHack/013-InfraAsCode-Ansible/Student/)
     
-[< Previous Challenge](Challenge-04.md) - [Home](../README.md) - [Next Challenge >](Challenge-06.md)
+[<  Reto Anterior](Challenge-04.md) - [Home](../README.md) - [Siguiente reto >](Challenge-06.md)

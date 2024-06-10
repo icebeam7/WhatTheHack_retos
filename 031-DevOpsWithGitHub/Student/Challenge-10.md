@@ -1,6 +1,6 @@
 # Challenge 10 - Security
 
-[< Previous Challenge](Challenge-09.md) - [Home](../README.md) - [Next Challenge >](Challenge-11.md)
+[< Reto Anterior](Challenge-09.md) - [Home](../README.md) - [Siguiente reto >](Challenge-11.md)
 
 ## Introduction
 
@@ -37,5 +37,5 @@ In this challenge, you will improve the security of your repository using some o
 
 - If you are stuck, check out the 'Security' tab of your repository on GitHub.
 
-[< Previous Challenge](Challenge-09.md) - [Home](../README.md) - [Next Challenge >](Challenge-11.md)
+[<  Reto Anterior](Challenge-09.md) - [Home](../README.md) - [Siguiente reto >](Challenge-11.md)
 

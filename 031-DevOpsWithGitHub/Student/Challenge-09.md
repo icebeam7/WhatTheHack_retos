@@ -1,6 +1,6 @@
 # Challenge 09 - Branching and Policies
 
-[< Previous Challenge](Challenge-08.md) - [Home](../README.md) - [Next Challenge >](Challenge-10.md)
+[<  Reto Anterior](Challenge-08.md) - [Home](../README.md) - [Siguiente reto >](Challenge-10.md)
 
 ## Introduction
 
@@ -56,4 +56,4 @@ If you would like to explore this flow, try to set up your repository for these 
 
 **IMPORTANT**: Do not delete the development branch after completing the deployment. You will want to use this same branch to repeat the process for your next deployment. 
 
-[< Previous Challenge](Challenge-08.md) - [Home](../README.md) - [Next Challenge >](Challenge-10.md)
+[<  Reto Anterior](Challenge-08.md) - [Home](../README.md) - [Siguiente reto >](Challenge-10.md)

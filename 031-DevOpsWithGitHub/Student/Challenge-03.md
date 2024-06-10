@@ -1,6 +1,6 @@
 # Challenge 03 - Track Your Work with GitHub Project Boards
 
-[< Previous Challenge](Challenge-02.md) - [Home](../README.md) - [Next Challenge >](Challenge-04.md)
+[<  Reto Anterior](Challenge-02.md) - [Home](../README.md) - [Siguiente reto >](Challenge-04.md)
 
 ## Introduction
 
@@ -63,4 +63,4 @@ Review the following introduction to GitHub project boards: [GitHub project boar
     -  Follow the steps [here](https://docs.microsoft.com/en-us/azure/devops/boards/github/install-github-app?view=azure-devops) to integrate Azure Boards with your GitHub repo.
 2. Use the [GitHub CLI](https://cli.github.com/manual/index) to create issue #9. Once, you have created the issue, use the CLI to close the issue.
 
-[< Previous Challenge](Challenge-02.md) - [Home](../README.md) - [Next Challenge >](Challenge-04.md)
+[<  Reto Anterior](Challenge-02.md) - [Home](../README.md) - [Siguiente reto >](Challenge-04.md)

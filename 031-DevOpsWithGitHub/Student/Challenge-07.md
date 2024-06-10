@@ -1,6 +1,6 @@
 # Challenge 07 - Build and Push Docker Image to Container Registry
 
-[< Previous Challenge](Challenge-06.md) - [Home](../README.md) - [Next Challenge >](Challenge-08.md)
+[<  Reto Anterior](Challenge-06.md) - [Home](../README.md) - [Siguiente reto >](Challenge-08.md)
 
 ## Introduction
 
@@ -61,4 +61,4 @@ In this challenge, you will build and push a docker image to ACR:
 - In this challenge, if the workflow fails, an email is set to the repo owner. Sometimes, you may want to log or create a GitHub issue when the workflow fails.
     - Add a step to your workflow to create a GitHub issue when there is a failure.
 
-[< Previous Challenge](Challenge-06.md) - [Home](../README.md) - [Next Challenge >](Challenge-08.md)
+[<  Reto Anterior](Challenge-06.md) - [Home](../README.md) - [Siguiente reto >](Challenge-08.md)

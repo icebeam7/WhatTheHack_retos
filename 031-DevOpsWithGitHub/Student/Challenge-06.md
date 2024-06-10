@@ -1,6 +1,6 @@
 # Challenge 06 - Continuous Integration (CI)
 
-[< Previous Challenge](Challenge-05.md) - [Home](../README.md) - [Next Challenge >](Challenge-07.md)
+[<  Reto Anterior](Challenge-05.md) - [Home](../README.md) - [Siguiente reto >](Challenge-07.md)
 
 ## Introduction
 
@@ -64,4 +64,4 @@ At this point, any changes pushed to the `/Application` folder automatically tri
 - In this challenge, if the workflow fails, an email is set to the repo owner. Sometimes, you may want to log or create a GitHub issue when the workflow fails.
     - Add a step to your workflow to create a GitHub issue when there is a failure.
 
-[< Previous Challenge](Challenge-05.md) - [Home](../README.md) - [Next Challenge >](Challenge-07.md)
+[<  Reto Anterior](Challenge-05.md) - [Home](../README.md) - [Siguiente reto >](Challenge-07.md)

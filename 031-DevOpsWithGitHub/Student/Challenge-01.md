@@ -1,6 +1,6 @@
 # Challenge 01 - Setup Your Repository
 
-[< Previous Challenge](Challenge-00.md) - [Home](../README.md) - [Next Challenge >](Challenge-02.md)
+[<  Reto Anterior](Challenge-00.md) - [Home](../README.md) - [Siguiente reto >](Challenge-02.md)
 
 ## Introduction
 
@@ -60,4 +60,4 @@ In this challenge, we have code in our repository! Version control is about more
 
 To practice this, have another member of the team clone the repository to their local machine (or pull the new changes if already cloned). Let this person make a small change of their own to one of the files (perhaps adding a comment or a newline). Then, push the change back to GitHub. The rest of the team should then pull the change, to ensure they see it on their local machines. (See some of the above links on adding files and syncing changes if you get stuck). 
 
-[< Previous Challenge](Challenge-00.md) - [Home](../README.md) - [Next Challenge >](Challenge-02.md)
+[<  Reto Anterior](Challenge-00.md) - [Home](../README.md) - [Next Challenge >](Challenge-02.md)
