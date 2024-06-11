@@ -1,64 +1,68 @@
-# Challenge 07 - Build and Push Docker Image to Container Registry
+# Reto 07 - Construir y Enviar una Imagen de Docker al Registro de Contenedores
 
 [<  Reto Anterior](Challenge-06.md) - [Home](../README.md) - [Siguiente reto >](Challenge-08.md)
 
-## Introduction
 
-Now, we need to extend our workflow with steps to build a docker image and push it to Azure Container Registry (ACR). In the NEXT challenge, we will configure the Web App to pull the image from ACR.
+## Introducción
 
-Containers are a great way to package and deploy applications consistently across environments. If you are new to containers, there are 3 key steps to creating and publishing an image - outlined below. Because this is a What The Hack focused on DevOps and not containers, we've strived to make this challenge as straightforward as possible.
+Ahora, necesitamos extender nuestro flujo de trabajo con pasos para construir una imagen de Docker y enviarla a Azure Container Registry (ACR). En el SIGUIENTE reto, configuraremos la Aplicación Web para que extraiga la imagen desde ACR.
 
-1. `docker login` - you need to login to the container registry that you will push your image to. As you can imagine, you don't want anyone to publish an image in your registry, so it is often setup as a private registry...requiring authentication to push and pull images.
+Los contenedores son una excelente manera de empaquetar y desplegar aplicaciones de manera consistente en diferentes entornos. Si eres nuevo en los contenedores, hay 3 pasos clave para crear y publicar una imagen, que se describen a continuación. Debido a que este es un What The Hack enfocado en DevOps y no en contenedores, hemos tratado de hacer este desafío lo más sencillo posible.
 
-2. `docker build` - you need to call docker.exe (running locally on your machine or on your build server) to create the container image. A *critical* component of this is the `Dockerfile`, which gives instructions to docker.exe on how to build the image, the files to copy, ports to expose and startup commands.
+1. `docker login` - necesitas iniciar sesión en el registro de contenedores al que enviarás tu imagen. Como puedes imaginar, no quieres que cualquiera publique una imagen en tu registro, por lo que a menudo se configura como un registro privado, requiriendo autenticación para enviar y extraer imágenes.
 
-3. `docker push` - once you have created your docker image, you need to store it in the container registry, which is our secured and centralized location to store docker images. Docker supports a push command that copies the docker image to the registry in the proper repository. A repository is a logical way of grouping and versioning docker images.
+2. `docker build` - necesitas llamar a docker.exe (ejecutándose localmente en tu máquina o en tu servidor de construcción) para crear la imagen del contenedor. Un componente *crítico* de esto es el `Dockerfile`, que da instrucciones a docker.exe sobre cómo construir la imagen, los archivos a copiar, puertos a exponer y comandos de inicio.
 
-## Description
+3. `docker push` - una vez que hayas creado tu imagen de Docker, necesitas almacenarla en el registro de contenedores, que es nuestra ubicación centralizada y segura para almacenar imágenes de Docker. Docker soporta un comando push que copia la imagen de Docker al registro en el repositorio adecuado. Un repositorio es una forma lógica de agrupar y versionar imágenes de Docker.
 
-In this challenge, you will build and push a docker image to ACR:
+## Descripción
 
-- At the top of your workflow file, create 4 environment variables:
+En este desafío, construirás y enviarás una imagen de Docker a ACR:
 
-    - `registryName` - the full server address of your ACR instance. Set this to "`registryName`.azurecr.io" - replacing `registryName` with the `<prefix>devopsreg` value in your ARM template file (line #26). 
-    - `repositoryName` - The repository to target in the registry. Set this to "`wth/dotnetcoreapp`".
-    - `dockerFolderPath` - The path to the folder that contains the Dockerfile - a critical parameter. You will need to point to the folder: `Application/src/RazorPagesTestSample`.
-    - `tag` - This needs to be a unique value each time, as this is used to version the images in the repository. GitHub makes [environment variables](https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#github-context) available that helps with this. Set `tag` to the [github.run_number](https://www.bing.com/search?q=%24%7B%7Bgithub.run_number%7D%7D&form=QBLH&sp=-1&pq=%24%7B%7Bgithub.run_number%7D%7D&sc=0-22&qs=n&sk=&cvid=D84DA66323DC4E14BD794F90FCFD90D3) environment variable.
+- En la parte superior de tu archivo de flujo de trabajo, crea 4 variables de entorno:
 
-- Go to the Azure Portal and get the (1) username and (2) password and (3) login server to your ACR instance and save as GitHub secrets (`ACR_USERNAME`, `ACR_PASSWORD`, `ACR_LOGIN_SERVER`).
+    - `registryName` - la dirección completa del servidor de tu instancia de ACR. Establécela en "`registryName`.azurecr.io" - reemplazando `registryName` con el valor `<prefix>devopsreg` en tu archivo de plantilla ARM (línea #26). 
+    - `repositoryName` - El repositorio a apuntar en el registro. Establécelo en "`wth/dotnetcoreapp`".
+    - `dockerFolderPath` - La ruta a la carpeta que contiene el Dockerfile, un parámetro crítico. Necesitarás apuntar a la carpeta: `Application/src/RazorPagesTestSample`.
+    - `tag` - Esto necesita ser un valor único cada vez, ya que se usa para versionar las imágenes en el repositorio. GitHub hace [variables de entorno](https://docs.github.com/en/free-pro-team@latest/actions/reference/context-and-expression-syntax-for-github-actions#github-context) disponibles que ayudan con esto. Establece `tag` en la variable de entorno [github.run_number](https://www.bing.com/search?q=%24%7B%7Bgithub.run_number%7D%7D&form=QBLH&sp=-1&pq=%24%7B%7Bgithub.run_number%7D%7D&sc=0-22&qs=n&sk=&cvid=D84DA66323DC4E14BD794F90FCFD90D3).
 
-- Add a second **job** to your existing .NET Core workflow. 
+- Ve al Portal de Azure y obtén (1) el nombre de usuario, (2) la contraseña y (3) el servidor de inicio de sesión de tu instancia de ACR y guárdalos como secretos de GitHub (`ACR_USERNAME`, `ACR_PASSWORD`, `ACR_LOGIN_SERVER`).
 
-- Make sure the first step in your second job includes `- uses: actions/checkout@v2`
+- Agrega un segundo **trabajo** a tu flujo de trabajo de .NET Core existente. 
 
-- To authenticate to the registry, add a step named `Docker login` with the following as the `run` command: `docker login $registryName -u ACR_USERNAME -p ACR_PASSWORD` - replacing ACR_USERNAME and ACR_PASSWORD with the secrets.
+- Asegúrate de que el primer paso en tu segundo trabajo incluya `- uses: actions/checkout@v2`
 
-- To build your image, add a step named `Docker build` with the following as the `run` command: `docker build -t $registryName/$repositoryName:$tag --build-arg build_version=$tag $dockerFolderPath`
+- Para autenticarte en el registro, agrega un paso llamado `Docker login` con el siguiente comando `run`: `docker login $registryName -u ACR_USERNAME -p ACR_PASSWORD` - reemplazando ACR_USERNAME y ACR_PASSWORD con los secretos.
 
-- To push your image to ACR, add a step named `Docker push` with the following as the `run` command: `docker push $registryName/$repositoryName:$tag`
+- Para construir tu imagen, agrega un paso llamado `Docker build` con el siguiente comando `run`: `docker build -t $registryName/$repositoryName:$tag --build-arg build_version=$tag $dockerFolderPath`
 
-- Test the workflow by making a small change to the application code (i.e., add a comment). Commit, push, monitor the workflow and verify that a new container image is built, uniquely tagged and pushed to ACR after each successful workflow run.
+- Para enviar tu imagen a ACR, agrega un paso llamado `Docker push` con el siguiente comando `run`: `docker push $registryName/$repositoryName:$tag`
 
-## Success Criteria
+- Prueba el flujo de trabajo haciendo un pequeño cambio en el código de la aplicación (por ejemplo, agrega un comentario). Haz un commit, empuja, monitorea el flujo de trabajo y verifica que se haya construido una nueva imagen de contenedor, etiquetado de manera única y enviado a ACR después de cada ejecución exitosa del flujo de trabajo.
 
-- A new container image is built, uniquely tagged and pushed to ACR after each successful workflow run.
+## Criterios de éxito
 
-## Learning Resources
+- Una nueva imagen de contenedor es construida, etiquetada de manera única y enviada a ACR después de cada ejecución exitosa del flujo de trabajo.
 
-- [Environment variables](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#env)
-- [Introduction to GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
-- [Understanding workflow path filters](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths)
-- [Authenticate with an Azure container registry](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-authentication#admin-account)
-- [GitHub Actions for Azure](https://github.com/Azure/actions)
+## Recursos de aprendizaje
 
-## Tips
+- [Variables de entorno](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#env)
+- [Introducción a GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
+- [Comprensión de los filtros de ruta del flujo de trabajo](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths)
+- [Autenticarse con un registro de contenedores de Azure](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-authentication#admin-account)
+- [GitHub Actions para Azure](https://github.com/Azure/actions)
 
-- If you are having trouble finding a starting point, try clicking over to the 'Actions' tab of your GitHub repository. 
-- Take advantage of the prebuilt workflow templates if you find one that might work! 
+## Consejos
 
-## Advanced Challenges (optional)
+- Si tienes problemas para encontrar un punto de partida, intenta hacer clic en la pestaña 'Actions' de tu repositorio de GitHub.
+- ¡Aprovecha las plantillas de flujo de trabajo preconstruidas si encuentras una que pueda funcionar!
 
-- In this challenge, if the workflow fails, an email is set to the repo owner. Sometimes, you may want to log or create a GitHub issue when the workflow fails.
-    - Add a step to your workflow to create a GitHub issue when there is a failure.
+## Desafíos avanzados (opcionales)
+
+- En este desafío, si el flujo de trabajo falla, se envía un correo electrónico al propietario del repositorio. A veces, es posible que desees registrar o crear un issue en GitHub cuando el flujo de trabajo falla.
+    - Agrega un paso a tu flujo de trabajo para crear un issue en GitHub cuando haya una falla.
+
+
 
 [<  Reto Anterior](Challenge-06.md) - [Home](../README.md) - [Siguiente reto >](Challenge-08.md)
+
