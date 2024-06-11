@@ -1,66 +1,77 @@
-# Challenge 03 - Track Your Work with GitHub Project Boards
+# Reto 03 - Seguimiento de tu Trabajo con GitHub Project Boards
 
 [<  Reto Anterior](Challenge-02.md) - [Home](../README.md) - [Siguiente reto >](Challenge-04.md)
 
-## Introduction
+## Introducción
 
-Agile project management is a key component of building a modern DevOps culture at your organization. If you are new to Agile or just want a refresher, we recommend you review the following articles:
+La gestión de proyectos Agile es un componente clave para construir una cultura DevOps moderna en tu organización. Si eres nuevo en Agile o solo quieres un repaso, te recomendamos que revises los siguientes artículos:
 
-1. [What is Agile?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-agile)
-2. [What is Scrum?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-scrum)
-3. [What is Kanban?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-kanban)
-4. [What is Agile Development?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-agile-development)
+1. [¿Qué es Agile?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-agile)
+2. [¿Qué es Scrum?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-scrum)
+3. [¿Qué es Kanban?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-kanban)
+4. [¿Qué es el Desarrollo Agile?](https://docs.microsoft.com/en-us/azure/devops/learn/agile/what-is-agile-development)
 
-To help you with Agile project management, there is [GitHub project boards](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects). With GitHub project boards, you can quickly and easily start tracking your backlog, tasks, issues/bugs and features associated with your project.  
+Para ayudarte con la gestión de proyectos Agile, existen [tableros de proyectos de GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects). Con los tableros de proyectos de GitHub, puedes comenzar a rastrear rápidamente tu backlog, tareas, problemas/bugs y características asociadas con tu proyecto.
 
-Review the following introduction to GitHub project boards: [GitHub project boards](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
+Revisa la siguiente introducción a los tableros de proyectos de GitHub: [Tableros de proyectos de GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects).
 
-## Description
 
-- Add collaborators from your team to your repo. 
+## Descripción
 
-- Create a new project using the "Team backlog" template.
+- Agrega colaboradores de tu equipo a tu repositorio.
 
-- Ensure your project is linked to your repository
+- Crea un nuevo proyecto usando la plantilla "Team backlog" si no encuentras la plantilal puedes usar llamada "Kanban".
 
-- Create a draft issue for this challenge (3) and each of the remaining challenges (i.e., create 9 issues total - skip challenges 0,1 and 2 as you already completed them). When creating each issue, make sure to:
-    - Assign an owner for each issue from your team. 
-    - Convert the `challenge 3` draft issue to an issue and select our repository. Look at the difference between a draft and your converted `challenge 3` issue
+- Asegúrate de que tu proyecto esté vinculado a tu repositorio.
 
-- Move all your issues to the "Ready" column and convert each one from draft to an issue.
+- Crea un borrador de issue para este reto (3) y cada uno de los retos restantes (es decir, crea 9 issues en total - omite los retos 0, 1 y 2, ya que ya los completaste). Al crear cada issue, asegúrate de:
+  - Asignar un propietario para cada issue de tu equipo.
+  - Convertir el borrador del issue del `reto 3` en un issue y selecciona nuestro repositorio. Observa la diferencia entre un borrador y tu issue convertido del `reto 3`.
 
-- Since you are currently working on Challenge 3, drag the `Challenge 3` issue to the "In progress" column.
+- Mueve todos tus issues a la columna "Listo" y conviértelos de borrador a issue.
 
-- Ask your team member to close the `Challenge 3` issue you assigned to them. Review your project board to see if the issue moved to the 'Done' column automatically. 
+- Dado que actualmente estás trabajando en el Reto 3, arrastra el issue del `Reto 3` a la columna "En progreso".
 
-- Create a new view to show your challenge issues in a table view. 
+- Pide a tu compañero de equipo que cierre el issue del `Reto 3` que le asignaste. Revisa tu tablero de proyecto para ver si el issue se movió automáticamente a la columna "Hecho".
 
-- Add a custom field to your issue. The custom field can be called Complexity and will be a single select type with the options (Very Easy, Easy, Hard and Very Hard).
+- Crea una nueva vista para mostrar tus issues de los retos en una vista de tabla.
 
-- After you complete each of the following challenges, be sure to close each associated issue. 
+- Agrega un campo personalizado a tu issue. El campo personalizado puede llamarse Complejidad y será de tipo selección única con las opciones (Muy Fácil, Fácil, Difícil y Muy Difícil).
 
-## Success Criteria
+- Después de completar cada uno de los siguientes retos, asegúrate de cerrar cada issue asociado.
 
-- You have added one or more collaborators to your repo
-- You have a project board using the automation kanban template with 9 issues (8 open, 1 closed by a team member)
-- New issues appear under the "New" column
-- Closed issues automatically appear under the "Done" column
-- You will have a table view in addition to your Backlog Board
-- You will have a custom field called Complexity on your issues
+## Criterios de Éxito
 
-## Learning Resources
+- Has agregado uno o más colaboradores a tu repositorio.
+- Tienes un tablero de proyecto utilizando la plantilla kanban de automatización con 9 issues (8 abiertos, 1 cerrado por un miembro del equipo).
+- Los nuevos issues aparecen bajo la columna "Nuevo".
+- Los issues cerrados aparecen automáticamente bajo la columna "Hecho".
+- Tienes una vista de tabla además de tu tablero de Backlog.
+- Tienes un campo personalizado llamado Complejidad en tus issues.
 
-- [Creating a project board in GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project)
-- [Enable GitHub Issues on a repo](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/disabling-issues)
-- [Inviting collaborators to a personal repository](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository)
-- [Learn more about automation with project boards](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations)
-- [Adding issues to a project](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project)
-- [Customizing views](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-a-view)
+## Recursos de Aprendizaje
 
-## Advanced Challenges (optional)
+- [Crear un tablero de proyecto en GitHub](https://docs.github.com/en/issues/planning-and-tracking-with-projects/creating-projects/creating-a-project)
+- [Habilitar GitHub Issues en un repositorio](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/disabling-issues)
+- [Invitar colaboradores a un repositorio personal](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository)
+- [Más información sobre la automatización con tableros de proyectos](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-built-in-automations)
+- [Agregar issues a un proyecto](https://docs.github.com/en/issues/planning-and-tracking-with-projects/managing-items-in-your-project/adding-items-to-your-project)
+- [Personalización de vistas](https://docs.github.com/en/issues/planning-and-tracking-with-projects/customizing-views-in-your-project/customizing-a-view)
 
-1. You can integrate Azure Boards with GitHub. 
-    -  Follow the steps [here](https://docs.microsoft.com/en-us/azure/devops/boards/github/install-github-app?view=azure-devops) to integrate Azure Boards with your GitHub repo.
-2. Use the [GitHub CLI](https://cli.github.com/manual/index) to create issue #9. Once, you have created the issue, use the CLI to close the issue.
+## Retos Avanzados (opcional)
+
+1. Puedes integrar Azure Boards con GitHub.
+    - Sigue los pasos [aquí](https://docs.microsoft.com/en-us/azure/devops/boards/github/install-github-app?view=azure-devops) para integrar Azure Boards con tu repositorio de GitHub.
+2. Usa la [CLI de GitHub](https://cli.github.com/manual/index) para crear el issue #9. Una vez que hayas creado el issue, usa la CLI para cerrar el issue.
+
 
 [<  Reto Anterior](Challenge-02.md) - [Home](../README.md) - [Siguiente reto >](Challenge-04.md)
+
+---
+
+
+
+
+
+
+
