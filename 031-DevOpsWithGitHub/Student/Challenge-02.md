@@ -1,56 +1,56 @@
-# Challenge 02 - Setup a Codespace
+# Reto 02 - Configurar un Codespace
 
 [<  Reto Anterior](Challenge-01.md) - [Home](../README.md) - [Siguiente reto >](Challenge-03.md)
 
-## Introduction
+## Introducción
 
-Developer environments are critical to ensuring your development teams are setup to do their best work. Right now everyone on your team likely has a slightly different setup of their environment (editor, extensions, tools) installed on their local machine.
+Los entornos de desarrollo son fundamentales para garantizar que los equipos de desarrollo estén configurados para hacer su mejor trabajo. Actualmente, es probable que cada miembro de tu equipo tenga una configuración ligeramente diferente de su entorno (editor, extensiones, herramientas) instalada en su máquina local.
 
-GitHub includes the ability to create a cloud based development environment called a codespace that is configured via a dev container (`devcontainer.json`) code file detailed within a repository. The file details how a developer environment should be supplied consistently from the cloud to every developer in the team who wants to create one in a self-serve manner. This can include the editor, extensions and tools we want to have available. 
+GitHub incluye la capacidad de crear un entorno de desarrollo basado en la nube llamado codespace que se configura mediante un archivo de código de contenedor de desarrollo (`devcontainer.json`) detallado dentro de un repositorio. El archivo detalla cómo debe suministrarse un entorno de desarrollo de manera consistente desde la nube a cada desarrollador del equipo que quiera crear uno de forma autoservicio. Esto puede incluir el editor, las extensiones y las herramientas que queremos tener disponibles.
 
-Our repository includes an application written in .NET that will deploy to Azure using Infrastructure-as-Code via a language called Bicep. We will want to configure our codespace to have tooling included to work with .NET, ARM (infrastructure-as-code) and the Azure CLI.
+Nuestro repositorio incluye una aplicación escrita en .NET que se desplegará en Azure usando Infraestructura como Código a través de un lenguaje llamado Bicep. Queremos configurar nuestro codespace para que tenga las herramientas incluidas para trabajar con .NET, ARM (infraestructura como código) y la CLI de Azure.
 
-## Description
+## Descripción
 
-- Add a new devcontainer file in your repository placed in a `.devcontainer` directory that defines your codespace. Ensure your devcontainer file is based on a docker image for .NET, notably "mcr.microsoft.com/devcontainers/dotnet:0-6.0" for the hackathon supplied application on .NET 6.0. 
+- Agrega un nuevo archivo devcontainer en tu repositorio, colocado en un directorio `.devcontainer` que defina tu codespace. Asegúrate de que tu archivo devcontainer se base en una imagen de Docker para .NET, notablemente "mcr.microsoft.com/devcontainers/dotnet:0-6.0" para la aplicación suministrada en el hackathon en .NET 6.0.
 
-  **HINT:** - VS Code Dev Containers Extension has a feature here that will simplify the process of creating a devcontainer file for many scenarios, or the below code snippet should be a good starter for our hackathon.
+  **SUGERENCIA:** - La extensión de contenedores de desarrollo de VS Code tiene una característica que simplificará el proceso de creación de un archivo devcontainer para muchos escenarios, o el siguiente fragmento de código debería ser un buen comienzo para nuestro hackathon.
 
-```
+```json
 {
-	"name": "C# (.NET)",
-	"image": "mcr.microsoft.com/devcontainers/dotnet:0-6.0",
-	"features": {
-		"ghcr.io/devcontainers/features/azure-cli:1": {
-			"installBicep": true,
-			"version": "latest"
-		}
-	}
+  "name": "C# (.NET)",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:0-6.0",
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "installBicep": true,
+      "version": "latest"
+    }
+  }
 }
 ```
 
-- Configure your devcontainer to add a feature for the Azure CLI. (the above code snippet includes this)
+- Configura tu devcontainer para agregar una característica para la CLI de Azure (el fragmento de código anterior incluye esto).
 
-- Start a new codespace in your repository testing .NET and Azure CLIs are available.
+- Inicia un nuevo codespace en tu repositorio y prueba que .NET y Azure CLI estén disponibles.
 
-## Success Criteria
+## Criterios de Éxito
 
-- You will have created a `devcontainer.json` placed in a `.devcontainer` directory.
-- You have created a codespace to provide a cloud based instance of the environment described in your devcontainer file. 
-- Your codespace will have tooling available for both the .NET and Azure CLIs
-
-
-## Learning Resources
-- [Overview of Codespaces](https://docs.github.com/en/codespaces/overview)
-- [Introduction to devcontainers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
-- [Setting up a C# (.NET) project in Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-dotnet-project-for-codespaces)
-- [Adding features to your devcontainer](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/configuring-dev-containers/adding-features-to-a-devcontainer-file?tool=webui)
-- [Visual Studio Code Dev Containers on VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-- [Visual Studio Code Dev Containers extension](https://code.visualstudio.com/docs/devcontainers/create-dev-container)
+- Debes haber creado un `devcontainer.json` colocado en un directorio `.devcontainer`.
+- Debes haber creado un codespace para proporcionar una instancia basada en la nube del entorno descrito en tu archivo devcontainer.
+- Tu codespace debe tener herramientas disponibles tanto para .NET como para Azure CLI.
 
 
-## Advanced Challenges (optional)
-- Add to your `devcontainer.json` details of an extension to install into Visual Studio Code and your Codespace so that it is available by default for all your team. An example here may be GitHub Copilot (which you can enable a free trial to give AI suggestions throughout the hackathon) or the GitHub Actions extension from GitHub both are available alongside thousands of others in the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/vscode)
-- Add a `postCreateCommand` to your `devcontainer.json` that will restore NuGet packages for the .NET app in the Application directory of the repo.  
+## Recursos de Aprendizaje
+- [Descripción general de Codespaces](https://docs.github.com/en/codespaces/overview)
+- [Introducción a devcontainers](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
+- [Configuración de un proyecto C# (.NET) en Codespaces](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/setting-up-your-dotnet-project-for-codespaces)
+- [Agregar características a tu devcontainer](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/configuring-dev-containers/adding-features-to-a-devcontainer-file?tool=webui)
+- [Visual Studio Code Dev Containers en VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [Extensión de Visual Studio Code Dev Containers](https://code.visualstudio.com/docs/devcontainers/create-dev-container)
+
+
+## Retos Avanzados (opcional)
+- Agrega a tu `devcontainer.json` detalles de una extensión para instalar en Visual Studio Code y tu Codespace para que esté disponible de forma predeterminada para todo tu equipo. Un ejemplo aquí puede ser GitHub Copilot (que puedes habilitar una prueba gratuita para obtener sugerencias de IA durante el evento) o la extensión de GitHub Actions de GitHub, ambas están disponibles junto con miles de otras en [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/vscode).
+- Agrega un `postCreateCommand` a tu `devcontainer.json` que restaurará los paquetes de NuGet para la aplicación .NET en el directorio de la aplicación del repositorio.
 
 [<  Reto Anterior](Challenge-01.md) - [Home](../README.md) - [Siguiente reto>](Challenge-03.md)
