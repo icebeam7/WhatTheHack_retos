@@ -1,67 +1,72 @@
-# Challenge 06 - Continuous Integration (CI)
+
+# Reto 06 - Integración Continua (CI)
 
 [<  Reto Anterior](Challenge-05.md) - [Home](../README.md) - [Siguiente reto >](Challenge-07.md)
 
-## Introduction
+## Introducción
 
-With our Azure resources created we have laid the foundations resources for our application. Now, we must connect our source code and its destination. The first step in this journey is called Continuous Integration (CI). 
+Con nuestros recursos de Azure creados, hemos establecido las bases para nuestra aplicación. Ahora, debemos conectar nuestro código fuente con su destino. El primer paso en este proceso se llama Integración Continua (CI).
 
-Continuous integration is the process of merging local code changes into source control and may include steps to automatically build and/or test the code. When done effectively, Continuous Integration allows developers to rapidly iterate and collaborate, and it helps ensure that newly added code does not break the current application. 
+La integración continua es el proceso de fusionar los cambios de código local en el control de versiones e incluye pasos para compilar y/o probar el código automáticamente. Cuando se hace de manera efectiva, la Integración Continua permite a los desarrolladores iterar y colaborar rápidamente, y ayuda a garantizar que el nuevo código agregado no rompa la aplicación actual.
 
-Review the following articles:
-- [About continuous integration](https://docs.github.com/en/actions/building-and-testing-code-with-continuous-integration/about-continuous-integration)
-- [Setting up continuous integration using workflow templates](https://docs.github.com/en/actions/building-and-testing-code-with-continuous-integration/setting-up-continuous-integration-using-github-actions)
+Revisa los siguientes artículos:
+- [Acerca de la integración continua](https://docs.github.com/en/actions/building-and-testing-code-with-continuous-integration/about-continuous-integration)
+- [Configurar la integración continua usando plantillas de flujo de trabajo](https://docs.github.com/en/actions/building-and-testing-code-with-continuous-integration/setting-up-continuous-integration-using-github-actions)
 
-## Description
+## Descripción
 
-In this challenge, you will build and test the .NET Core application.
+En este reto, construirás y probarás la aplicación .NET Core.
 
-- Create a new `.NET` workflow. 
+- Crea un nuevo flujo de trabajo de `.NET`.
 
-   **NOTE:** To get a new scaffold workflow, in your repo click on Actions in the top menu > New Workflow (button) > scroll down to the 'Continuous integration workflows' section and select the configure button on the '.NET' example.
+   **NOTA:** Para obtener un nuevo flujo de trabajo de ejemplo, en tu repositorio, haz clic en Acciones en el menú superior > Nuevo flujo de trabajo (botón) > desplázate hacia abajo hasta la sección 'Flujos de trabajo de integración continua' y selecciona el botón de configurar en el ejemplo de '.NET'.
 
-- Review the layout of the workflow. There is a single job (named 'build') with multiple steps (restore, build, test). 
+- Revisa la estructura del flujo de trabajo. Hay un solo trabajo (llamado 'build') con múltiples pasos (restore, build, test).
 
-   **NOTE:** There are some new events for the workflow we haven't used before for 'push' and 'pull_request'.
+   **NOTA:** Hay algunos eventos nuevos para el flujo de trabajo que no hemos usado antes, como 'push' y 'pull_request'.
 
-- In your workflow, under the "Setup .NET Core" step, check the .NET version is `6.0.x` to match the version defined by the application.
+- En tu flujo de trabajo, bajo el paso "Setup .NET Core", verifica que la versión de .NET sea `6.0.x` para coincidir con la versión definida por la aplicación.
 
-- Ensure the workflow is configured to trigger on both pushes *and* pull requests.
+- Asegúrate de que el flujo de trabajo esté configurado para desencadenarse tanto en pushes *como* en pull requests.
 
-- Configure both these triggers with path filters to *only* trigger this workflow for changes in the `/Application` folder.
+- Configura ambos desencadenadores con filtros de ruta para que *solo* se active este flujo de trabajo para cambios en la carpeta `/Application`.
 
-- Update the predefined steps used to build the .NET Core application 
+- Actualiza los pasos predefinidos utilizados para construir la aplicación .NET Core.
 
-   **NOTE:** For each step below, you will need to update each command to pass the relative path to the  `.csproj` as an argument):
-   - `restore` - will get all the dependencies. Update with an [argument](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build#arguments) to the application csproj file.
-   - `build` - will actually compile our code. Update with an argument to the application csproj file.
-   - `test` - will execute all our unit tests. Update with an argument to the unit test csproj file. 
+   **NOTA:** Para cada paso a continuación, necesitarás actualizar cada comando para pasar la ruta relativa al archivo `.csproj` como argumento:
+   - `restore` - obtendrá todas las dependencias. Actualiza con un [argumento](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-build#arguments) al archivo csproj de la aplicación.
+   - `build` - compilará nuestro código. Actualiza con un argumento al archivo csproj de la aplicación.
+   - `test` - ejecutará todas nuestras pruebas unitarias. Actualiza con un argumento al archivo csproj de pruebas unitarias.
 
-- Test the workflow by making a small change to the application code (i.e., add a comment). Commit, push and ensure the workflow completes successfully.
+- Prueba el flujo de trabajo haciendo un pequeño cambio en el código de la aplicación (por ejemplo, agrega un comentario). Haz commit, push y asegúrate de que el flujo de trabajo se complete con éxito.
 
-At this point, any changes pushed to the `/Application` folder automatically triggers the workflow...and that is Continuous Integration! 
+En este punto, cualquier cambio empujado a la carpeta `/Application` activará automáticamente el flujo de trabajo... ¡y eso es Integración Continua!
 
-## Success Criteria
+## Criterios de éxito
 
-- Any changes pushed to the `/Application` folder automatically triggers the workflow 
-- .NET Core restore, build and test steps completes successfully
+- Cualquier cambio empujado a la carpeta `/Application` activará automáticamente el flujo de trabajo.
+- Los pasos de restauración, compilación y prueba de .NET Core se completan con éxito.
 
-## Learning Resources
+## Recursos de aprendizaje
 
-- [Introduction to GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
-- [.NET Core Action to build and test](https://github.com/actions/starter-workflows/blob/dacfd0a22a5a696b74a41f0b49c98ff41ef88427/ci/dotnet-core.yml)
-- [Understanding workflow path filters](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths)
-- [dotnet commands](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet#dotnet-commands)
-- [GitHub Actions for Azure](https://github.com/Azure/actions)
+- [Introducción a GitHub Actions](https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/introduction-to-github-actions)
+- [Acción de .NET Core para construir y probar](https://github.com/actions/starter-workflows/blob/dacfd0a22a5a696b74a41f0b49c98ff41ef88427/ci/dotnet-core.yml)
+- [Comprensión de los filtros de ruta del flujo de trabajo](https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions#onpushpull_requestpaths)
+- [Comandos dotnet](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet#dotnet-commands)
+- [GitHub Actions para Azure](https://github.com/Azure/actions)
 
-## Tips
+## Consejos
 
-- If you are having trouble finding a starting point, try clicking over to the 'Actions' tab of your GitHub repository. 
-- Take advantage of the prebuilt workflow templates often will save you a ton of work! 
+- Si tienes problemas para encontrar un punto de partida, intenta hacer clic en la pestaña 'Actions' de tu repositorio de GitHub.
+- ¡Aprovecha las plantillas de flujo de trabajo preconstruidas que a menudo te ahorrarán mucho trabajo!
 
-## Advanced Challenges (optional)
+## Desafíos avanzados (opcionales)
 
-- In this challenge, if the workflow fails, an email is set to the repo owner. Sometimes, you may want to log or create a GitHub issue when the workflow fails.
-    - Add a step to your workflow to create a GitHub issue when there is a failure.
+- En este reto, si el flujo de trabajo falla, se envía un correo electrónico al propietario del repositorio. A veces, es posible que desees registrar o crear un issue en GitHub cuando el flujo de trabajo falla.
+    - Agrega un paso a tu flujo de trabajo para crear un issue en GitHub cuando haya una falla.
+
 
 [<  Reto Anterior](Challenge-05.md) - [Home](../README.md) - [Siguiente reto >](Challenge-07.md)
+
+---
+
