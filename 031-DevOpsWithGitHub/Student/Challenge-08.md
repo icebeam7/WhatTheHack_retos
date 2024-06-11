@@ -1,39 +1,38 @@
-# Challenge 08 – Continuous Delivery (CD)
+# Reto 08 – Entrega Continua (CD)
 
 [<  Reto Anterior](Challenge-07.md) - [Home](../README.md) - [Siguiente reto >](Challenge-09.md)
 
-## Introduction
+## Introducción
 
-In DevOps after we automate our build process, we want to automate our release process, we do this with a technique called Continuous Delivery (CD). Please take a moment to review this brief article talking about why this is important. 
+En DevOps, después de automatizar nuestro proceso de construcción, queremos automatizar nuestro proceso de lanzamiento, lo hacemos con una técnica llamada Entrega Continua (CD). Tómate un momento para revisar este breve artículo que explica por qué esto es importante.
 
-- [What is Continuous Delivery?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-continuous-delivery)
+- [¿Qué es la Entrega Continua?](https://docs.microsoft.com/en-us/azure/devops/learn/what-is-continuous-delivery)
 
-## Description
+## Descripción
 
-In this challenge, we will use GitHub Actions to deploy our container image to the dev environment. 
+En este desafío, usaremos GitHub Actions para desplegar nuestra imagen de contenedor en el entorno de desarrollo.
 
-**OPTIONAL**: Use your code editor (VS Code) to update your workflow file locally on your machine. Remember to commit and push any changes.
 
-Extend the workflow you created in Challenge #7 to:
+Extiende el flujo de trabajo que creaste en el Desafío #7 para:
 
-- Configure your `dev` environment to pull the latest container image from ACR. 
-   - Login to Azure using your service principal, if needed ([hint](https://docs.microsoft.com/en-us/azure/app-service/deploy-container-github-action?tabs=service-principal#tabpanel_CeZOj-G++Q-3_service-principal))
-   - Use the `Azure/webapps-deploy@v2` [action](https://github.com/Azure/webapps-deploy) to update the Web App to pull the latest image from ACR. Key parameters to configure:
-      - `app-name` - the name of the wep app instance to target
-      - `images` - the path to the image you pushed to ACR
+- Configurar tu entorno `dev` para extraer la última imagen del contenedor desde ACR.
+   - Inicia sesión en Azure usando tu principal service, si es necesario ([pista](https://docs.microsoft.com/en-us/azure/app-service/deploy-container-github-action?tabs=service-principal#tabpanel_CeZOj-G++Q-3_service-principal))
+   - Usa la acción `Azure/webapps-deploy@v2` [acción](https://github.com/Azure/webapps-deploy) para actualizar la Aplicación Web y extraer la última imagen desde ACR. Parámetros clave a configurar:
+      - `app-name` - el nombre de la instancia de la aplicación web a la que apuntar
+      - `images` - la ruta a la imagen que enviaste a ACR
 
-- Make a small change to your application  (i.e.,`/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml`), commit, push, monitor the workflow and see if the change shows up on the dev instance of the website.
+- Haz un pequeño cambio en tu aplicación (i.e.,`/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml`), haz commit, push, monitorea el flujo de trabajo y verifica si el cambio aparece en la instancia de desarrollo del sitio web.
 
-- Configure your workflow to deploy to your `test` and `prod` environments and after a manual approval for *each* environment.
+- Configura tu flujo de trabajo para desplegar en tus entornos `test` y `prod` después de una aprobación manual para *cada* entorno.
 
-## Success Criteria
+## Criterios de éxito
 
-1. A small change to `/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml` automatically shows up on the website running in the `dev` environment (i.e., `<prefix>devops-dev`.azurewebsites.net).
-2. Manual approval is required to deploy to the `test` and `prod` environments.
+1. Un pequeño cambio en `/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml` se muestra automáticamente en el sitio web que se ejecuta en el entorno `dev` (i.e., `<prefix>devops-dev`.azurewebsites.net).
+2. Se requiere una aprobación manual para desplegar en los entornos `test` y `prod`.
 
-## Learning Resources
+## Recursos de aprendizaje
 
-- [Deploy a custom container to App Service using GitHub Actions](https://docs.microsoft.com/en-us/azure/app-service/deploy-container-github-action?tabs=service-principal#tabpanel_CeZOj-G++Q-3_service-principal)
-- [Using environments for deployment](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
+- [Desplegar un contenedor personalizado en App Service usando GitHub Actions](https://docs.microsoft.com/en-us/azure/app-service/deploy-container-github-action?tabs=service-principal#tabpanel_CeZOj-G++Q-3_service-principal)
+- [Usar entornos para despliegue](https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment)
 
 [<  Reto Anterior](Challenge-07.md) - [Home](../README.md) - [Siguiente reto >](Challenge-09.md)
