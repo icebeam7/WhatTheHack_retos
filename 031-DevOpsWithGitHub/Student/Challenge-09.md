@@ -1,59 +1,60 @@
-# Challenge 09 - Branching and Policies
+# Desafío 09 - Ramas y Políticas
 
 [<  Reto Anterior](Challenge-08.md) - [Home](../README.md) - [Siguiente reto >](Challenge-10.md)
 
-## Introduction
+## Introducción
 
-In the previous steps, we successfully implemented an end-to-end CI/CD pipeline! However, our current workflow will immediately promote every small change directly to production. Typically, you would want to avoid working directly against the main branch in your repository to avoid conflicts and protect the production environment. 
+¡En los pasos anteriores, implementamos con éxito una canalización CI/CD de extremo a extremo! Sin embargo, nuestro flujo de trabajo actual promoverá inmediatamente cada pequeño cambio directamente a producción. Normalmente, querrás evitar trabajar directamente en la rama principal de tu repositorio para evitar conflictos y proteger el entorno de producción.
 
-With GitHub, we can solve these challenges using a practice called branching. Some may refer to this as the [GitHub flow](https://guides.github.com/introduction/flow/). When a developer wants to make a change, add a feature, or fix a bug, he or she begins by creating a new 'branch' or copy of the main codebase. Then, the developer makes changes and commits them. He or she creates a pull request to merge these changes back into the main branch. This pull request may or may not involve some testing or discussion. Finally, changes are merged back into the main codebase, and the branch can be deleted. 
+Con GitHub, podemos resolver estos desafíos utilizando una práctica llamada ramificación. Algunos pueden referirse a esto como el [flujo de GitHub](https://guides.github.com/introduction/flow/). Cuando un desarrollador quiere hacer un cambio, agregar una característica o corregir un error, comienza creando una nueva 'rama' o copia de la base de código principal. Luego, el desarrollador realiza cambios y los confirma. Crea una solicitud de extracción para fusionar estos cambios de nuevo en la rama principal. Esta solicitud de extracción puede o no involucrar algunas pruebas o discusiones. Finalmente, los cambios se fusionan de nuevo en la base de código principal y la rama se puede eliminar.
 
-In this challenge, you will practice this flow. Additionally, GitHub offers a feature for explicitly protecting against changes directly to the main branch. These are called branch protection rules, and you will start by implementing one.
+En este desafío, practicarás este flujo. Además, GitHub ofrece una característica para proteger explícitamente contra cambios directos a la rama principal. Estas se llaman reglas de protección de ramas y comenzarás implementando una.
 
-## Description
+## Descripción
 
-- Create a branch protection rule which prevents developers from committing changes to the main branch in the repository.
+- Crea una regla de protección de ramas que evite que los desarrolladores comprometan cambios en la rama principal del repositorio.
 
-- Create a feature branch, make a small change to the code (i.e.,`/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml`), and sync this branch with the GitHub repository.
+- Crea una rama de características, realiza un pequeño cambio en el código (por ejemplo, `/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml`), y sincroniza esta rama con el repositorio de GitHub.
 
-- Define a code owner for the `/Application` directory. Your branch policy should require a review from the code owner.
+- Define un propietario de código para el directorio `/Application`. Tu política de ramas debe requerir una revisión del propietario del código.
 
-- Create and complete a Pull Request, merging your code change into the protected branch.
+- Crea y completa una Solicitud de Extracción, fusionando tu cambio de código en la rama protegida.
 
-## Success Criteria
+## Criterios de Éxito
 
-- You have a branch protection rule which prevents changes from being commited to your main branch.
+- Tienes una regla de protección de ramas que impide cambios en la rama principal.
 
-- Changes to the application (i.e.,`/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml`) are committed to a feature branch.
+- Los cambios en la aplicación (por ejemplo, `/Application/aspnet-core-dotnet-core/Views/Home/Index.cshtml`) se confirman en una rama de características.
 
-- Before a pull request is completed:
-    - A code owner must approve the changes ([hint](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners))
-    - A CI workflow is run against the feature branch ensuring the application passes a build and test ([hint](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-required-status-checks))
+- Antes de completar una solicitud de extracción:
+    - Un propietario de código debe aprobar los cambios ([consejo](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners))
+    - Un flujo de trabajo CI se ejecuta contra la rama de características asegurando que la aplicación pase una construcción y prueba ([consejo](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-required-status-checks))
 
-- A completed pull request merges with the protected branch and is automatically deployed to the dev environment.
-
-## Learning Resources
-
-- General information about protected branches can be found [here](https://docs.github.com/en/github/administering-a-repository/about-protected-branches), with more configuration specifics [here](https://docs.github.com/en/github/administering-a-repository/configuring-protected-branches).
-- General information about branches can be found [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches), with more specifics about creation and deletion [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository).
-- General information about pull requests can be found [here](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests), with more specifics about [creating](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) and [reviewing](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests).
-- [About code owners](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners)
-- [Enabling required status checks](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-required-status-checks)
-- [About required reviews for pull requests](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/about-required-reviews-for-pull-requests)
-
-## Tips
-
-- If your GitHub account was created on the 'Free' tier, then in order to create a Branch Protection rule your repository must be public. To change a repository from private to public, visit the 'Settings' tab, and scroll to the bottom where you have the option to 'Change visibility.'
-- If using the git command line interface, you can find a number of sample git commands that are useful for branching [here](https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac). (Make sure to focus on the 'git' commands, rather than 'gitflow'.)
-- If using the git command line interface, try adding '--help' after a command to get helpful information about arguments and usage.
+- Una solicitud de extracción completada se fusiona con la rama protegida y se despliega automáticamente en el entorno de desarrollo.
 
 
-## Advanced Challenges (optional)
+## Recursos de Aprendizaje
 
-In this challenge, we focused on creating a feature branch directly off of the main branch. Some organizations, however, prefer to do phased deployments. Instead of merging feature branches directly back into production, this alternate strategy involves having a main production branch and a development branch which runs parallel to the main branch. Feature and bug fix branches are created from and merged into the development branch. When you want to release new features to production, create a pull request to merge changes from development into the main branch. 
+- La información general sobre ramas protegidas se puede encontrar [aquí](https://docs.github.com/en/github/administering-a-repository/about-protected-branches), con más detalles de configuración [aquí](https://docs.github.com/en/github/administering-a-repository/configuring-protected-branches).
+- La información general sobre ramas se puede encontrar [aquí](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-branches), con más detalles sobre creación y eliminación [aquí](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-and-deleting-branches-within-your-repository).
+- La información general sobre pull requests se puede encontrar [aquí](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests), con más detalles sobre [creación](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request) y [revisión](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/reviewing-changes-in-pull-requests).
+- [Sobre propietarios de código](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/about-code-owners)
+- [Habilitar verificaciones de estado requeridas](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/enabling-required-status-checks)
+- [Sobre revisiones requeridas para solicitudes de extracción](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/about-required-reviews-for-pull-requests)
 
-If you would like to explore this flow, try to set up your repository for these 'phased deployments.' Begin by creating a development branch off of your main branch. On the development branch, repeat the flow from above. When you are ready to release, create and complete a pull request merging the development branch into the main branch. 
+## Consejos
 
-**IMPORTANT**: Do not delete the development branch after completing the deployment. You will want to use this same branch to repeat the process for your next deployment. 
+- Si tu cuenta de GitHub se creó en el nivel 'Gratis', para crear una regla de Protección de Ramas tu repositorio debe ser público. Para cambiar un repositorio de privado a público, visita la pestaña 'Configuración' y desplázate hasta la parte inferior donde tienes la opción de 'Cambiar visibilidad'.
+- Si usas la interfaz de línea de comandos de git, puedes encontrar una serie de comandos de git útiles para ramificación [aquí](https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac). (Asegúrate de enfocarte en los comandos 'git', en lugar de 'gitflow').
+- Si usas la interfaz de línea de comandos de git, intenta agregar '--help' después de un comando para obtener información útil sobre argumentos y uso.
+
+## Desafíos Avanzados (opcionales)
+
+En este desafío, nos enfocamos en crear una rama de características directamente desde la rama principal. Sin embargo, algunas organizaciones prefieren hacer implementaciones por fases. En lugar de fusionar ramas de características directamente en producción, esta estrategia alternativa implica tener una rama de producción principal y una rama de desarrollo que se ejecuta en paralelo a la rama principal. Las ramas de características y corrección de errores se crean a partir de y se fusionan en la rama de desarrollo. Cuando quieras lanzar nuevas características a producción, crea una solicitud de extracción para fusionar los cambios de desarrollo en la rama principal.
+
+Si deseas explorar este flujo, intenta configurar tu repositorio para estas 'implementaciones por fases.' Comienza creando una rama de desarrollo a partir de tu rama principal. En la rama de desarrollo, repite el flujo anterior. Cuando estés listo para lanzar, crea y completa una solicitud de extracción fusionando la rama de desarrollo en la rama principal.
+
+**IMPORTANTE**: No elimines la rama de desarrollo después de completar la implementación. Querrás usar esta misma rama para repetir el proceso para tu próxima implementación.
 
 [<  Reto Anterior](Challenge-08.md) - [Home](../README.md) - [Siguiente reto >](Challenge-10.md)
+
