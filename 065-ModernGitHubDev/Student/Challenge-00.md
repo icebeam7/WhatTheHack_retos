@@ -10,16 +10,19 @@ Gracias por participar en What The Hack en el reto Modern development con DevOps
 
 Durante este desafio, utilizarás características que te permitirán programar y contribuir al proyecto sin necesidad de instalar herramientas localmente. Como resultado, solo necesitarás asegurarte de tener lo siguiente:
 
-- [Cuenta de GitHub](https://github.com) para desarrollar y gestionar el proyecto.
-- Cuenta de Azure, la cual te proporcionaremos al inicio del reto. 
+- Comienza creando una cuenta de GitHub que puedas usar para este hackathon. Puedes usar una cuenta existente si ya tienes una. 
 
-<!-- Nota si agregamos que lo puedan hacer local editar este [Azure Subscription](../../000-HowToHack/WTH-Common-Prerequisites.md#azure-subscription) for deploying the application. -->
+**Nota:** Utiliza una cuenta personal de GitHub. Si tienes una cuenta de trabajo, por favor no uses esa. Usa una cuenta personal o crea una nueva, ya que algunos recursos que vamos a utilizar solo funcionan en cuentas personales. Vamos a usar Codespaces y, a veces, en las cuentas empresariales no está habilitado.
+
+- A continuación, necesitarás la suscripción de Azure que te compartimos al inicio. Las credenciales para ingresar a la cuenta se encuentran en un repositorio al que te agregamos. 
+
+**Nota:** Para iniciar sesión en Azure, por favor hazlo desde una ventana de incógnito. Verás una opción para habilitar la seguridad; elige hacerlo más tarde. Estas cuentas de Azure se han creado solo para el reto y al final se eliminarán. Por ahora, solo asegúrate de que puedes iniciar sesión en Azure. No necesitas crear nada todavía. Si tienes alguna duda, avísanos.
+
+
 
 ## Descripción
 
 El refugio ya cuenta con una aplicación creada por un proveedor que desean utilizar como base para su sitio web. El proyecto actualmente lo puedes encontrar en [GitHub como una plantilla](https://github.com/WhatTheHack-CF/template_modern_dev_Devops). El primer paso es obtener el código fuente y crear un repositorio en GitHub para mantener una copia separada. Los cambios que realices no se mezclaran con el repositorio original.
-
-<!-- https://github.com/github/pets-workshop recuerda crear el porpio en espaniol para -->
 
 El proyecto es un proyecto de Next.js/React que utiliza MongoDB.
 
