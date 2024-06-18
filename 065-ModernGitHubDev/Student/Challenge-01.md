@@ -12,11 +12,13 @@ Crearás un entorno de desarrollo que cumpla con las necesidades mencionadas ant
 
 GitHub Codespaces es un entorno de desarrollo en la nube que nos ayudará a trabajar sin necesidad de instalar nada localmente en tu máquina, todo se hará en la nube. Aquí puedes ver más sobre lo que es un [GitHub Codespace](https://docs.github.com/es/codespaces/overview).
 
-Durante el desarrollo, crearás recursos en Azure y configurarás tu repositorio en GitHub utilizando GitHub Actions, Azure CLI y GitHub CLI. No es necesario que crees recursos en Azure directamente, ya que hemos preparado scripts que lo harán por ti. Solo necesitas seguir las instrucciones y asegurarte de que todo esté correctamente configurado en tu repositorio de GitHub.
+Durante el desarrollo (en un reto posterior), crearás recursos en Azure y configurarás tu repositorio en GitHub utilizando GitHub Actions, Azure CLI y GitHub CLI. No es necesario que crees recursos en Azure directamente, ya que hemos preparado scripts que lo harán por ti. Solo necesitarás seguir las instrucciones y asegurarte de que todo esté correctamente configurado en tu repositorio de GitHub.
 
-Al inicio del taller, recibirás los detalles necesarios para acceder a la cuenta de Azure. Asegúrate de iniciar sesión en Azure desde una ventana de incógnito y selecciona la opción para habilitar la seguridad más tarde. Estas cuentas de Azure se han creado solo para este reto y serán eliminadas al final, por lo que no te preocupes por habilitar la seguridad ahora.
+Al inicio del taller, recibirás los detalles necesarios para acceder a la cuenta de Azure. Asegúrate de iniciar sesión en Azure desde una ventana de incógnito y selecciona la opción para habilitar la seguridad más tarde. Estas cuentas de Azure se han creado solo para este reto y serán eliminadas al final, por lo que no te preocupes por habilitar la seguridad ahora. Repetimos, sin embargo, que en este reto de configuración NO crearás recursos de Azure, pues esto se realizará más adelante. De momento, considera esto solo como información complementaria.
 
 La aplicación utiliza una variable de entorno llamada **MONGODB_URI** para conectarse a la base de datos MongoDB. Puedes agregar esta variable en los settings de tu repositorio, en la sección de Codespaces, como un secreto cifrado.
+
+En primer lugar, crea un Codespace a partir del repositorio que se encuentra en tu cuenta de GitHub. Una vez dentro, configúralo de acuerdo a las siguientes indicaciones:
 
 ### Pasos para configurar tu Codespace:
 
