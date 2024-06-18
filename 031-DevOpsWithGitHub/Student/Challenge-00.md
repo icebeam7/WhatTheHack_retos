@@ -8,13 +8,11 @@ DevOps es un concepto amplio que abarca personas, procesos y herramientas. Las h
 
 ## Descripción
 
-- Comienza creando una cuenta de GitHub que puedas usar para este hackathon. Puedes usar una cuenta existente si ya tienes una.
+- Comienza creando una cuenta de GitHub que puedas usar para este hackathon. Puedes usar una cuenta existente si ya tienes una. **Nota:** Utiliza una cuenta personal de GitHub. Si tienes una cuenta de trabajo, por favor no uses esa. Usa una cuenta personal o crea una nueva, ya que algunos recursos que vamos a utilizar solo funcionan en cuentas personales. Vamos a usar Codespaces y, a veces, en las cuentas empresariales no está configurado o habilitado.
 
-// Para este reto requieres una cuenta personal de GitHub, si tienes una cuenta de tu trabajo por favor no ocupes esta, usa tu cuenta perosnal o crea una.
+- A continuación, necesitarás la suscripción de Azure que te compartimos al inicio. Las credenciales para ingresar a la cuenta se encuentran en un repositorio al que te agregamos. 
 
-- A continuación, necesitarás la suscripción de Azure que te compartimos al inicio. Las credenciales para ingresar a la cuenta se encuentran en un repositorio al que te agregamos. Si tienes alguna duda, avísanos.
-
-// Para inicar sesión en azure por favor hazlo desde una ventana de incognito y cuando veas la opción de seguridad dale click en hacer despues.    
+**Nota:** Para iniciar sesión en Azure, por favor hazlo desde una ventana de incógnito. Verás una opción para habilitar la seguridad; elige hacerlo más tarde. Estas cuentas de Azure se han creado solo para el reto y al final se eliminarán. Por ahora, solo asegúrate de que puedes iniciar sesión en Azure. No necesitas crear nada todavía. Si tienes alguna duda, avísanos.
 
 ## Criterios de Éxito
 
@@ -26,6 +24,5 @@ DevOps es un concepto amplio que abarca personas, procesos y herramientas. Las h
 - [¿Qué es GitHub?](https://guides.github.com/activities/hello-world/)
 - [Azure DevOps vs. GitHub](https://acloudguru.com/blog/engineering/azure-devops-vs-github-comparing-microsofts-devops-twins)
 - [GitHub Skills](https://skills.github.com/)
-
 
 [Home](../README.md) - [Siguiente reto >](Challenge-01.md)
