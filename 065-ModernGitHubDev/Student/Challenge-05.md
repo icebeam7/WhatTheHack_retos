@@ -1,6 +1,6 @@
 # Reto 05 - Despliegue del proyecto
 
-[< Reto Anterior ](./Challenge-04.md) - **[Home](../README.md)**
+[< Reto Anterior](./Challenge-04.md) - **[Home](../README.md)**
 
 ## Introducción
 
@@ -14,25 +14,27 @@ Completarás este hack creando una última [GitHub Action](https://docs.github.c
 
 Para los propósitos de este hack, desplegarás en el [entorno que creaste anteriormente](./Challenge-04.md) cuando el código se envíe a `main`.
 
+> **Nota:** En el archivo Bicep, hay que hacer un cambio que está comentado. Búscalo y haz el cambio antes de hacer este despliegue. Si te sientes abrumado con la action a crear, aquí puedes encontrar un [ejemplo de la acción a crear](https://gist.github.com/luislogosmx/384f7387d5a1e45dbe602265b2d023b8). Debes intentar hacerlo por ti mismo antes de usar el ejemplo.
+
 ## Criterios de Éxito
 
 - Demuestra que se ha creado un GitHub Action que despliega el sitio web en [Azure Container Apps](https://learn.microsoft.com/es-es/azure/container-apps/overview) cuando el código se envía a `main`.
 - Verifica que la PR que creaste anteriormente se haya enviado a `main`.
 - Demuestra que el sitio público muestra la aplicación del refugio, incluyendo la información de horarios del [componente que creaste anteriormente](./Challenge-01.md).
 
-
-## Learning Resources
+## Recursos de Aprendizaje
 
 - [Entender las GitHub Actions](https://docs.github.com/es/actions/learn-github-actions/understanding-github-actions)
 - [Activar un flujo de trabajo](https://docs.github.com/es/actions/using-workflows/triggering-a-workflow)
 - [Implementación en Azure Container Apps con Acciones de GitHub](https://learn.microsoft.com/es-es/azure/container-apps/github-actions)
 - [Azure Container Apps Build and Deploy - GitHub Actions](https://github.com/marketplace/actions/azure-container-apps-build-and-deploy)
 - [GitHub Actions contexts](https://docs.github.com/es/actions/learn-github-actions/contexts)
-- [Uso de secretos en GitHub actions](https://docs.github.com/es/actions/security-guides/using-secrets-in-github-actions)
+- [Uso de secretos en GitHub Actions](https://docs.github.com/es/actions/security-guides/using-secrets-in-github-actions)
 
 ## Tips
 
 - Puedes concatenar cadenas al definir un workflow usando secretos o variables y literales de cadena.
 - El nombre del 'Azure Container Registry' será **`<your_prefix>`acr**
 - El nombre de la 'Azure Container App' será **`<your_prefix>`containerapp**
-- El nombre de la ' Azure Container App' será **`<your_prefix>`containerappenvironment**
+- El nombre de la 'Azure Container App' será **`<your_prefix>`containerappenvironment**
+
