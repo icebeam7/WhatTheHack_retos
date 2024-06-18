@@ -14,7 +14,7 @@ Completarás este hack creando una última [GitHub Action](https://docs.github.c
 
 Para los propósitos de este hack, desplegarás en el [entorno que creaste anteriormente](./Challenge-04.md) cuando el código se envíe a `main`.
 
-> **Nota:** En el archivo Bicep, hay que hacer un cambio que está comentado. Búscalo y haz el cambio antes de hacer este despliegue. Si te sientes abrumado con la action a crear, aquí puedes encontrar un [ejemplo de la acción a crear](https://gist.github.com/luislogosmx/384f7387d5a1e45dbe602265b2d023b8). Debes intentar hacerlo por ti mismo antes de usar el ejemplo.
+> **Nota:** En el archivo Bicep, hay que hacer un cambio que está comentado. Búscalo y haz el cambio. Para que el cambio surja efecto, debes ejecutar manualmente de nuevo el workflow del reto anterior antes de hacer este despliegue. Si te sientes abrumado con la action a crear, aquí puedes encontrar un [ejemplo de la acción a crear](https://gist.github.com/luislogosmx/384f7387d5a1e45dbe602265b2d023b8). Debes intentar hacerlo por ti mismo antes de usar el ejemplo.
 
 ## Criterios de Éxito
 
