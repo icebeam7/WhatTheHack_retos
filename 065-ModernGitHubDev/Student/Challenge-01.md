@@ -1,4 +1,4 @@
-# Reto 01: Configurar tu entorno de desarrollo
+# Reto 01 - Configura tu entorno de desarrollo
 
 [< Reto Anterior](./Challenge-00.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-02.md)
 
@@ -10,11 +10,49 @@ Con la copia del proyecto obtenida, es momento de centrar tu atención en config
 
 Crearás un entorno de desarrollo que cumpla con las necesidades mencionadas anteriormente. Quieres poder comenzar a escribir código sin necesidad de instalar recursos localmente en tu máquina.
 
-Durante el desarrollo, crearás recursos en Azure y configurarás tu repositorio en GitHub utilizando las CLIs de Azure y GitHub. Al inicio del taller, recibirás los detalles necesarios para acceder a todos los recursos de Azure y configurar adecuadamente tu entorno de desarrollo en la nube.
+GitHub Codespaces es un entorno de desarrollo en la nube que nos ayudará a trabajar sin necesidad de instalar nada localmente en tu máquina, todo se hará en la nube. Aquí puedes ver más sobre lo que es un [GitHub Codespace](https://docs.github.com/es/codespaces/overview).
 
-La aplicación utiliza una variable de entorno llamada **MONGODB_URI** para conectarse a la base de datos MongoDB. Al crear tu entorno de desarrollo en la nube, necesitarás agregar esto como un secreto encriptado con el valor **mongodb://localhost**.
+Durante el desarrollo, crearás recursos en Azure y configurarás tu repositorio en GitHub utilizando GitHub Actions, Azure CLI y GitHub CLI. No es necesario que crees recursos en Azure directamente, ya que hemos preparado scripts que lo harán por ti. Solo necesitas seguir las instrucciones y asegurarte de que todo esté correctamente configurado en tu repositorio de GitHub.
 
-Una vez creado el entorno de desarrollo, necesitarás probar la aplicación ejecutando el siguiente comando:
+Al inicio del taller, recibirás los detalles necesarios para acceder a la cuenta de Azure. Asegúrate de iniciar sesión en Azure desde una ventana de incógnito y selecciona la opción para habilitar la seguridad más tarde. Estas cuentas de Azure se han creado solo para este reto y serán eliminadas al final, por lo que no te preocupes por habilitar la seguridad ahora.
+
+La aplicación utiliza una variable de entorno llamada **MONGODB_URI** para conectarse a la base de datos MongoDB. Puedes agregar esta variable en los settings de tu repositorio, en la sección de Codespaces, como un secreto cifrado.
+
+### Pasos para configurar tu Codespace:
+
+
+1. Accede a la **Paleta de Comandos** presionando **F1** o haciendo clic en el menú ☰ y seleccionando **View** → **Command Palette**.
+
+2. Comienza a escribir **dev container** en la Paleta de Comandos.
+
+3. Selecciona **Codespaces: Add Development Container Configuration Files...**.
+
+4. Selecciona **Create a new configuration...**.
+
+5. Selecciona **From a predefined container configuration...**.
+
+6. Desplázate hacia abajo y selecciona **Node.js & Mongo DB**.
+
+7. Selecciona **20 (default)** para la versión de Node.js.
+
+8. En la siguiente pantalla, selecciona **Azure CLI devcontainers** y **GitHub CLI devcontainers** de las características adicionales y luego selecciona **OK**.
+
+    - **NOTA:** Puedes escribir el nombre de la característica que deseas para filtrar la lista.
+
+9. Selecciona **Keep defaults**.
+
+    - Esto creará los archivos de definición del nuevo contenedor en la carpeta `.devcontainer`.
+
+10. Abre la **Paleta de Comandos** nuevamente.
+
+11. Escribe **rebuild** y selecciona **Codespaces: Rebuild container**.
+
+12. Selecciona **Rebuild Container** en el cuadro de diálogo. Ahora tu contenedor se reconstruirá.
+
+    - **IMPORTANTE:** La reconstrucción del contenedor puede tardar varios minutos.
+
+
+Una vez creado el Codespace y configurados los recursos, podrás ejecutar la aplicación con el siguiente comando:
 
 ```bash
 npm run dev
@@ -27,11 +65,11 @@ npm run dev
   - Azure CLI
   - MongoDB
 - Has creado un secreto encriptado para MONGODB_URI
-- Eres capaz de inciar y ver la aplicación en el entorno de desarrollo basado en la nube
+- Eres capaz de iniciar y ver la aplicación en el entorno de desarrollo basado en la nube.
 - Todos los cambios se fusionan en 'main'.
-- **No** se instalaron recursos en tu máquina
+- **No** se instalaron recursos en tu máquina.
 
-## Learning Resources
+## Recursos de Aprendizaje
 
 - [GitHub Codespaces](https://docs.github.com/es/codespaces/overview)
 - [Introducción a los contenedores dev](https://docs.github.com/es/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers)
@@ -45,4 +83,6 @@ npm run dev
 ## Tips
 
 - **Ctl-\`** mostrará la ventana de la terminal en Codespaces.
-- **Cmd-Shift-P** (Mac) or **Ctl-Shift-P** (PC) abrirá la paleta de comandos
+- **Cmd-Shift-P** (Mac) o **Ctl-Shift-P** (PC) abrirá la paleta de comandos.
+
+[< Reto Anterior](./Challenge-00.md) - **[Home](../README.md)** - [Siguiente reto >](./Challenge-02.md)
