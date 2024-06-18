@@ -8,22 +8,13 @@ Históricamente, el control de versiones ha sido el primer componente que los eq
 
 ## Descripción
 
-En este reto, te asegurarás de tener un repositorio de GitHub configurado con el código de la aplicación de muestra. El repositorio lo puedes encontrar [aqui](https://github.com/WhatTheHack-CF/-template_devops_github) 
+En este reto, te asegurarás de tener un repositorio de GitHub configurado con el código de la aplicación de muestra.
 
-
-## Usar un repositorio de GitHub existente con los archivos de la aplicación de muestra
-
-
-Comienza clonando el [repositorio](https://github.com/WhatTheHack-CF/-template_devops_github) en tu cuenta.  
-
-
+- Comienza creando un nuevo repositorio en tu cuenta de GitHub usando el repositorio configurado como plantilla. Puedes encontrar el repositorio plantilla [aquí](https://github.com/WhatTheHack-CF/-template_devops_github). Asegúrate de usar el botón para crear una copia del repositorio en tu cuenta personal. Este repositorio está configurado como un template, lo que te permitirá hacer una copia fácilmente.
 
 ## Criterios de Éxito
 
-- Tu repositorio está clonado en tu cuenta.
-
-
-
+- Tienes un repositorio en tu cuenta personal que se creó a partir del repositorio plantilla.
 
 ## Recursos de Aprendizaje
 
@@ -37,9 +28,9 @@ Comienza clonando el [repositorio](https://github.com/WhatTheHack-CF/-template_d
 - Para una explicación concisa de cómo agregar archivos a un repositorio vía la línea de comandos, consulta [aquí](https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line).
 - Para ver cómo se hace en el portal de GitHub, consulta [aquí](https://docs.github.com/en/github/managing-files-in-a-repository/managing-files-on-github).
 
-## Retos Avanzados (opcionales)
+## Reto Avanzados (opcionales)
 
-¡En este reto, tenemos código en nuestro repositorio! El control de versiones se trata de más que simplemente hacer push de código a una ubicación centralizada, es fundamental para mantener a los desarrolladores sincronizados con los cambios realizados por cualquier otra persona en tu equipo. Por lo tanto, nos preocupamos no solo por * hacer push* de código a un repositorio, sino también por *hacer pull*  de cambios desde él.
+¡En este reto, tenemos código en nuestro repositorio! El control de versiones se trata de más que simplemente hacer push de código a una ubicación centralizada, es fundamental para mantener a los desarrolladores sincronizados con los cambios realizados por cualquier otra persona en tu equipo. Por lo tanto, nos preocupamos no solo por *hacer push* de código a un repositorio, sino también por *hacer pull* de cambios desde él.
 
 Para practicar esto, pide a otro miembro del equipo que clone el repositorio en su cuenta (o que haga pull de los nuevos cambios si ya está clonado). Deja que esta persona haga un pequeño cambio en uno de los archivos (quizás agregando un comentario o una nueva línea). Luego, haz push del cambio de vuelta a GitHub. El resto del equipo debería entonces hacer pull del cambio, para asegurarse de que lo vean en sus cuentas. (Consulta algunos de los enlaces anteriores sobre cómo agregar archivos y sincronizar cambios si te quedas atascado).
 
