@@ -16,7 +16,7 @@ Durante el desarrollo (en un reto posterior), crearás recursos en Azure y confi
 
 Al inicio del taller, recibirás los detalles necesarios para acceder a la cuenta de Azure. Asegúrate de iniciar sesión en Azure desde una ventana de incógnito y selecciona la opción para habilitar la seguridad más tarde. Estas cuentas de Azure se han creado solo para este reto y serán eliminadas al final, por lo que no te preocupes por habilitar la seguridad ahora. Repetimos, sin embargo, que en este reto de configuración NO crearás recursos de Azure, pues esto se realizará más adelante. De momento, considera esto solo como información complementaria.
 
-La aplicación utiliza una variable de entorno llamada **MONGODB_URI** para conectarse a la base de datos MongoDB. Puedes agregar esta variable en los settings de tu repositorio, en la sección de Codespaces, como un secreto cifrado.
+La aplicación utiliza una variable de entorno llamada **MONGODB_URI** con el valor **mongodb://localhost** para conectarse a la base de datos MongoDB. Puedes agregar esta variable en los settings de tu repositorio, en la sección de Codespaces, como un secreto cifrado.
 
 En primer lugar, crea un Codespace a partir del repositorio que se encuentra en tu cuenta de GitHub. Una vez dentro, configúralo de acuerdo a las siguientes indicaciones:
 
