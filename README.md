@@ -54,6 +54,7 @@ Here is the current list of What The Hack hackathons available in this repositor
 - [DevOps with GitHub](/031-DevOpsWithGitHub/README.md)
 - [Modern Development and DevOps with GitHub](/065-ModernGitHubDev/README.md)
 - [Azure OpenAI Fundamentals](/066-OpenAIFundamentals/README.md)
+- [Modern Development and DevOps with GitHub v2](/DevOps-GitHub/README.md)
 
 
 # License

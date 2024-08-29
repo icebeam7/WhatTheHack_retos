@@ -10,7 +10,7 @@ El refugio sabe que hay mucho trabajo por hacer en la aplicación. Debido a que 
 
 Con el entorno de desarrollo creado y configurado, es hora de programar. Aunque el proyecto utiliza [Next.js](https://nextjs.org)/[React](https://reactjs.org), no todos somos expertos en esos frameworks. Incluso los expertos pueden tener dificultades a veces para recordar la sintaxis. Y ningún desarrollador disfruta de las tareas tediosas que a menudo surgen al escribir código. GitHub Copilot es un programador auxiliar de IA entrenado con miles de millones de líneas de código y texto públicamente disponibles, diseñado para ofrecer sugerencias de código que mejoren y agilicen tu proceso de desarrollo.
 
-> **IMPORTANTE:** Como se destacó anteriormente, no se requiere experiencia en programación para este reto. Si necesitas la solución, sigue leyendo y encontrarás el código necesario. Intenta hacerlo por ti mismo y, si te atoras, como último recurso, revisa el código proporcionado más abajo.
+> **IMPORTANTE:** Como se destacó anteriormente, no se requiere experiencia en programación para este reto. **Si necesitas la solución, sigue leyendo y encontrarás el código necesario.** Intenta hacerlo por ti mismo y, si te atoras, como último recurso, revisa el código proporcionado más abajo.
 
 Para este desafío, crearás un nuevo componente React llamado **Hours.js** en la carpeta **components**. Añadirás el código necesario para mostrar las horas del día actual de la semana. Después de crear el componente, actualizarás **index.js** en la carpeta **pages** para importar el componente recién creado y mostrarlo en la página.
 

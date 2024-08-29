@@ -18,6 +18,12 @@ Para los propósitos de este hack, desplegarás en el [entorno que creaste anter
 
 > Si te sientes abrumado con la action a crear, aquí puedes encontrar un [ejemplo de la acción a crear](https://gist.github.com/luislogosmx/384f7387d5a1e45dbe602265b2d023b8). Te pedimos que intentes hacerlo por ti mismo antes de utilizar el ejemplo.
 
+En resumen, estos son los 2 pasos que hay que realizar:
+
+- En la rama `main`, modifica el workflow que creaste en el reto anterior estableciendo el puerto que debes usar. Sincroniza los cambios con tu repositorio y vuelve a ejecutar el workflow desde la pestaña Actions. Tu url no funcionará, no te preocupes, eso se arregla después del siguiente paso.
+
+- En la rama `main`, crea un nuevo workflow (el link al código está arriba) para desplegar la aplicación en Azure utilizando los recursos que ya generaste en el reto anterior. Cuando sincronices los cambios haciendo un push, este workflow se ejecutará automáticamente. Revisa el progreso en la pestaña Actions. Una vez concluido con éxito, revisa la url y deberá verse desplegada la página del refugio (intenta desde una ventana de incógnito para evitar que la caché te muestre la versión anterior).
+
 ## Criterios de Éxito
 
 - Demuestra que se ha creado un GitHub Action que despliega el sitio web en [Azure Container Apps](https://learn.microsoft.com/es-es/azure/container-apps/overview) cuando el código se envía a `main`.

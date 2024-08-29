@@ -12,6 +12,13 @@ Para este desafío, deberas configurar el escaneo para toda la [cadena de sumini
 
 El escaneo de vulnerabilidades, la ejecución de pruebas y la verificación de que el código compila típicamente se automatizan como parte de un proceso llamado integración continua (CI). La CI permite a los equipos validar rápidamente que el nuevo código no introduzca problemas en la base de código existente, mejorando tu capacidad para responder a las solicitudes de los clientes y reducir la sobrecarga de desarrollo. Para este hack, habilitarás [GitHub Advanced Security](https://docs.github.com/es/get-started/learning-about-github/about-github-advanced-security), que es una parte común de un proceso completo de CI.
 
+## Tips
+
+- En la pestaña **Settings**, localiza la opción **Code security and analysis** en el menú lateral. Activa las actualizaciones de seguridad de Dependabot y el análisis de CodeQL.
+- Ahora, en el menú lateral **Branches** agrega una regla de protección de rama sobre `main` que requiera un pull request antes de hacer un merge y que requiera que se aprueben dos comprobaciones de estado antes de hacer merge: Dependabot y CodeQL (selecciona las que aparezcan, en caso de que no aparezca ninguna, continúa el reto e intenta este paso una hora más tarde).
+- Crea la regla.
+- Crea una rama si no lo has hecho ya. Haz un commit sobre la rama, sincroniza los cambios, genera un pull request hacia main. Observarás que aparecen algunas comprobaciones de estado. No necesitas esperar a que se completen, puedes continuar con el reto.
+
 ## Criterios de Éxito
 
 - Demostrar que la [revisión de dependencias](https://docs.github.com/es/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review) está habilitada para el repositorio.

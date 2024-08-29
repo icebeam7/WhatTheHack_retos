@@ -18,7 +18,7 @@ La aplicación utiliza una variable de entorno llamada **MONGODB_URI** con el va
 
 Por tanto, **en primer lugar** agrega este elemento en los **Settings** de tu repositorio, en la sección de **Codespaces**, como un **secreto** cifrado.
 
-A continuación, **crea un Codespace** a partir del repositorio que se encuentra **en tu cuenta de GitHub** (Importante: El Codespace debe ser creado desde TU repositorio en TU cuenta).
+A continuación, **crea un Codespace** a partir del repositorio que se encuentra **en tu cuenta de GitHub** (Importante: El Codespace debe ser creado desde TU repositorio en TU cuenta) haciendo clic en el botón verde **Code**.
 
 Una vez dentro de tu Codespace, **configúralo** de acuerdo a las siguientes indicaciones:
 
